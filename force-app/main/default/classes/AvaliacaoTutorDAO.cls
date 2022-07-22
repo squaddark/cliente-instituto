@@ -116,7 +116,13 @@ public without sharing class AvaliacaoTutorDAO {
             SELECT 
                 Id, 
                 Aluno__c,
-                Periodo_de_Avaliacao__c
+                Periodo_de_Avaliacao__c,
+                NotaEsportivaA1__c,
+                NotaEsportiva_A2__c,
+                NotaEsportivaA3__c,
+                NotaSocioemocionalA1__c,
+                NotaSocioemocionalA2__c,
+                NotaSocioemocionalA3__c
             FROM 
                 AvaliacaoEsportivaSocioemocional__c 
             WHERE 
@@ -180,11 +186,15 @@ public without sharing class AvaliacaoTutorDAO {
             ORDER BY 
                 Aluno__c];
 
+        if (test.size() == 0) {
+            return 0;
+        }
+
         Id verificaAluno = test[0].Aluno__c;
         String verificaAprovado = test[0].Aprovado__c;
         String verificaMateria = test[0].Disciplina__c;
 
-        Integer cont = 0;
+        Integer cont = 1;
 
         for(Integer i = 1; i < test.size(); i++){
             System.debug(test[i]);
