@@ -1,0 +1,16 @@
+.textExibicao{
+    width: 100%;
+    border: 1px solid #C9C9C9;
+    padding: 5px;
+    margin: 2px 0px;
+    padding-left: 12px;
+    border-radius: 3px;
+    color: #444444;
+    background-color: #bebebe56;
+}
+.textLabel{
+    width: 100%;
+    color: #444444;
+    font-size: 0.7525rem;
+    padding-left: 10px;
+}
