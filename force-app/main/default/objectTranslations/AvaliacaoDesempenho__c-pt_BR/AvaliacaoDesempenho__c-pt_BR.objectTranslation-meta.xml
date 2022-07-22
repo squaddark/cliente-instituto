@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Avaliação de desempenho</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Avaliações de desempenho</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout de Avaliação de desempenho</layout>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Resultado</section>
+        </sections>
+    </layouts>
+</CustomObjectTranslation>

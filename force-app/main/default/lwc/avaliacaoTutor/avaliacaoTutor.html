@@ -1,0 +1,526 @@
+<template>
+    <div if:true={isLoaded} class="slds-is-relative">
+        <lightning-spinner
+            alternative-text="Loading..." variant="brand">
+        </lightning-spinner>
+    </div>
+    <template if:true={pagina1}>
+        <lightning-quick-action-panel header="Avaliação Tutor - Treinador">
+                <lightning-record-edit-form object-api-name= "AvaliacaoTutor__c" >
+                    <div class= "slds-grid slds-wrap"> 
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox 
+                                label="Mês referência"
+                                name="mesReferencia"
+                                placeholder="Selecione o mês"
+                                value={mesReferencia}
+                                options={meses}
+                                onchange={atualizarMesReferencia}
+                                required="true">
+                                </lightning-combobox>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-combobox 
+                                label="Ano referência"
+                                name="anoReferencia"
+                                placeholder="Selecione o ano"
+                                value={anoReferencia}
+                                options={anos}
+                                onchange={atualizarMesReferencia}
+                                required="true">
+                            </lightning-combobox>
+                        </div>
+                    </div>
+                    <div class= "slds-grid slds-wrap"> 
+                        <div class="slds-col slds-size_full">
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="CodigoTreinador__c" onchange={atualizarValoresAvalicao} name="CodigoTreinador" value={codigoTreinador} required="true"></lightning-input-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-messages> </lightning-messages>
+                            <lightning-input-field field-name="DataPrimeiraVisita__c" onchange={atualizarValoresAvalicao} name="DataPrimeiraVisita" value={primeiraVisita} required="true"> </lightning-input-field>
+                            <lightning-record-view-form record-id={idAvaliacao} object-api-name="AvaliacaoTutor__c">
+                                <!--<lightning-output-field field-name="TotalRespostas__c"></lightning-output-field>-->
+                                <!--<lightning-output-field field-name="PontuacaoTotal__c"></lightning-output-field>-->
+                                <template if:true = {existeAvaliacao}>
+                                    <lightning-output-field field-name="IndiceAproveitamento__c"></lightning-output-field>
+                                </template>
+                            </lightning-record-view-form>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-input-field field-name="DataSegundaVisita__c" onchange={atualizarValoresAvalicao} name="DataSegundaVisita" value={segundaVisita}> </lightning-input-field>
+                        </div>
+                    </div>
+                </lightning-record-edit-form>
+        </lightning-quick-action-panel>
+    </template>
+    <template if:true={pagina2}>
+        <lightning-quick-action-panel header="Questionário da Avaliação">
+            <!--1-Número de turmas-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    {numeroTurmas}
+                    <!-- <lightning-combobox name="resposta1"
+                        label="Número de turmas"
+                        placeholder="Respostas"
+                        value={parametro1}
+                        options={opcoesParametros1}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox> -->
+                </div>
+            </div>
+            <!--2-Número de alunos/turmas-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta2"
+                        label="Número de alunos/turmas"
+                        placeholder="Respostas"
+                        value={parametro2}
+                        options={opcoesParametros2}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--3-Alunos/as matriculados com cadastro completo-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta3"
+                        label="Alunos/as matriculados com cadastro completo"
+                        placeholder="Respostas"
+                        value={parametro3}
+                        options={opcoesParametros3}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--4-Turmas com controle de frequência registrado (aulas ministradas)-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta4"
+                        label="Turmas com controle de frequência registrado (aulas ministradas)"
+                        placeholder="Respostas"
+                        value={parametro4}
+                        options={opcoesParametros3}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <template if:true={avaliacaoAbrAgoNov}>
+                <!--5-Realização das avaliações esportivas (alunos matriculados)-->
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta5"
+                            label="Realização das avaliações esportivas (alunos matriculados)"
+                            placeholder="Respostas"
+                            value={parametro5}
+                            options={opcoesParametros3}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+                <!--6-Realização das avaliações socioemocionais (alunos matriculados)-->
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta6"
+                            label="Realização das avaliações socioemocionais (alunos matriculados)"
+                            placeholder="Respostas"
+                            value={parametro6}
+                            options={opcoesParametros3}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--7-Notas de português e matemática (alunos matriculados)-->
+            <template if:true={avaliacaoAbrjunSetNov}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta7"
+                            label="Notas de português e matemática (alunos matriculados)"
+                            placeholder="Respostas"
+                            value={parametro7}
+                            options={opcoesParametros3}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--8-Aprovação no ano letivo (alunos matriculados)-->
+            <template if:true={avaliacaoNov}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta8"
+                            label="Aprovação no ano letivo (alunos matriculados)"
+                            placeholder="Respostas"
+                            value={parametro8}
+                            options={opcoesParametros3}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--9-Realização de reuniões com famílias-->
+            <template if:true={avaliacaoMar}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta9"
+                            label="Realização de reuniões com famílias"
+                            placeholder="Respostas"
+                            value={parametro9}
+                            options={opcoesParametros1}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--10-Tarefas do curso online entregues no prazo-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta10"
+                        label="Tarefas do curso online entregues no prazo"
+                        placeholder="Respostas"
+                        value={parametro10}
+                        options={opcoesParametros4}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--11-Presença no encontro de formação-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta11"
+                        label="Presença no encontro de formação"
+                        placeholder="Respostas"
+                        value={parametro11}
+                        options={opcoesParametros1}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--12-Planeja o semestre de acordo com as diretrizes-->
+            <template if:true={avaliacaoAbrAgo}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta12"
+                            label="Planeja o semestre de acordo com as diretrizes"
+                            placeholder="Respostas"
+                            value={parametro12}
+                            options={opcoesParametros6}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--13-Utiliza o Passaporte Superação para estabelecimento de metas e acompanhamento dos/as atletas-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta13"
+                        label="Utiliza o Passaporte Superação para estabelecimento de metas e acompanhamento dos/as atletas"
+                        placeholder="Respostas"
+                        value={parametro13}
+                        options={opcoesParametros1}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--14-Realizou o Super Festival-->
+            <template if:true={avaliacaoJun}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta14"
+                            label="Realizou o Super Festival"
+                            placeholder="Respostas"
+                            value={parametro14}
+                            options={opcoesParametros1}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--15- Participou do Festival Superação-->
+            <template if:true={avaliacaoNov}>
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                        <lightning-combobox name="resposta15"
+                            label="Participou do Festival Superação"
+                            placeholder="Respostas"
+                            value={parametro15}
+                            options={opcoesParametros1}
+                            onchange={atualizarRespostas}
+                            required="true">
+                        </lightning-combobox>
+                    </div>
+                </div>
+            </template>
+            <!--16-Prepara o espaço de treino com antecedência-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta16"
+                        label="Prepara o espaço de treino com antecedência"
+                        placeholder="Respostas"
+                        value={parametro16}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--17-Tem planejamento prévio adequado à turma-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta17"
+                        label="Tem planejamento prévio adequado à turma"
+                        placeholder="Respostas"
+                        value={parametro17}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--18-Realiza atividades de aprendizagem para desenvolvimento socioemocional-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta18"
+                        label="Realiza atividades de aprendizagem para desenvolvimento socioemocional"
+                        placeholder="Respostas"
+                        value={parametro18}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--19-Utiliza as estratégias previstas no modelo Superação (roda, jogos de criatividade, desafios coordenativos, ...)-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta19"
+                        label="Utiliza as estratégias previstas no modelo Superação (roda, jogos de criatividade, desafios coordenativos, ...)"
+                        placeholder="Respostas"
+                        value={parametro19}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--20-Mantém o ambiente esportivo positivo em todas as circunstâncias-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta20"
+                        label="Mantém o ambiente esportivo positivo em todas as circunstâncias"
+                        placeholder="Respostas"
+                        value={parametro20}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--21-AUTOCONFIANÇA - Valoriza seu trabalho como treinador/a e reconhece a importância do que faz-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta21"
+                        label="AUTOCONFIANÇA - Valoriza seu trabalho como treinador/a e reconhece a importância do que faz"
+                        placeholder="Respostas"
+                        value={parametro21}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--22-EMPATIA - Importa-se com a vida das/os atletas dentro e fora da quadra e age intencionalmente para conhecer e compreender cada um/a deles/as-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta22"
+                        label="EMPATIA - Importa-se com a vida das/os atletas dentro e fora da quadra e age intencionalmente para conhecer e compreender cada um/a deles/as"
+                        placeholder="Respostas"
+                        value={parametro22}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--23-HONESTIDADE - É justo/a e lidera pelo exemplo com condutas éticas dentro e fora de quadra-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta23"
+                        label="HONESTIDADE - É justo/a e lidera pelo exemplo com condutas éticas dentro e fora de quadra"
+                        placeholder="Respostas"
+                        value={parametro23}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--24-RESPEITO - Valoriza igualmente todo/a e cada atleta, independente do nível de habilidade ou papel na equipe-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta24"
+                        label="RESPEITO - Valoriza igualmente todo/a e cada atleta, independente do nível de habilidade ou papel na equipe"
+                        placeholder="Respostas"
+                        value={parametro24}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--25-AUTONOMIA - É autodisciplinado/a e age em busca do seu crescimento pessoal e profissional-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta25"
+                        label="AUTONOMIA - É autodisciplinado/a e age em busca do seu crescimento pessoal e profissional"
+                        placeholder="Respostas"
+                        value={parametro25}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--26-RESPONSABILIDADE - É pontual e assíduo/a, cumprindo com todas as suas atribuições como treinador(a) do Superação-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta26"
+                        label="RESPONSABILIDADE - É pontual e assíduo/a, cumprindo com todas as suas atribuições como treinador(a) do Superação"
+                        placeholder="Respostas"
+                        value={parametro26}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--27-AUTOCONTROLE - Demonstra controle emocional mesmo sob pressão, preservando as relações cordiais com todos/as-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta27"
+                        label="AUTOCONTROLE - Demonstra controle emocional mesmo sob pressão, preservando as relações cordiais com todos/as"
+                        placeholder="Respostas"
+                        value={parametro27}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--28-TOMADA DE DECISÃO - Toma decisões, mesmo sob pressão e stress, pautado/a pelo Valores da Mão-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta28"
+                        label="TOMADA DE DECISÃO - Toma decisões, mesmo sob pressão e stress, pautado/a pelo Valores da Mão"
+                        placeholder="Respostas"
+                        value={parametro28}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--29-COOPERAÇÃO - Cria um ambiente esportivo positivo e divertido e garante espaços de escuta, diálogo e cooperação com os/as atletas-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta29"
+                        label="COOPERAÇÃO - Cria um ambiente esportivo positivo e divertido e garante espaços de escuta, diálogo e cooperação com os/as atletas"
+                        placeholder="Respostas"
+                        value={parametro29}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--30-COMUNICAÇÃO - Comunica-se de maneira positiva, clara, eficaz e ética-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta30"
+                        label="COMUNICAÇÃO - Comunica-se de maneira positiva, clara, eficaz e ética"
+                        placeholder="Respostas"
+                        value={parametro30}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--31-PERSISTÊNCIA - Demonstra empenho na busca por sua evolução pessoal como treinador/a do IS-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta31"
+                        label="PERSISTÊNCIA - Demonstra empenho na busca por sua evolução pessoal como treinador/a do IS"
+                        placeholder="Respostas"
+                        value={parametro31}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <!--32-RESILIÊNCIA - Maneja seus próprios erros e derrotas de maneira positiva como etapa necessária para o aprendizado-->
+            <div class= "slds-grid slds-wrap"> 
+                <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+                    <lightning-combobox name="resposta32"
+                        label="RESILIÊNCIA - Maneja seus próprios erros e derrotas de maneira positiva como etapa necessária para o aprendizado"
+                        placeholder="Respostas"
+                        value={parametro32}
+                        options={opcoesParametros5}
+                        onchange={atualizarRespostas}
+                        required="true">
+                    </lightning-combobox>
+                </div>
+            </div>
+            <lightning-record-edit-form record-id={idAvaliacao} object-api-name= "AvaliacaoTutor__c" >
+                <lightning-input-field field-name="Observacoes__c" name="Observacoes" value={observacoes} onchange={atualizarValoresAvalicao}> </lightning-input-field>
+            </lightning-record-edit-form>
+            <div class="slds-grid slds-wrap slds-p-around_small">
+                <div class="slds-col slds-size_1-of-1">
+                    <br/>
+                </div>
+            </div>
+        </lightning-quick-action-panel>
+    </template>
+    <template if:true={pagina3}>
+        <lightning-quick-action-panel header="Aproveitamento do Treinador">
+            <lightning-record-view-form record-id={idAvaliacao} object-api-name="AvaliacaoTutor__c">
+                <div class= "slds-grid slds-wrap"> 
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-messages> </lightning-messages>
+                        <lightning-output-field field-name="CodigoTreinador__c"></lightning-output-field>
+                        <lightning-output-field field-name="DataPrimeiraVisita__c"> </lightning-output-field>
+                    </div>
+                    <div class="slds-col slds-size_1-of-2">
+                        <lightning-output-field field-name="IndiceAproveitamento__c"></lightning-output-field>
+                        <lightning-output-field field-name="DataSegundaVisita__c"> </lightning-output-field>
+                    </div>
+                </div>
+            </lightning-record-view-form>
+        </lightning-quick-action-panel>
+    </template>
+    <lightning-quick-action-panel>
+        <!--Botões-->
+        <div slot="footer">
+            <lightning-button onclick={cancelar} label="Fechar"></lightning-button>
+            <lightning-button if:true={pagina2} onclick={voltar} label="Voltar"></lightning-button>
+            <lightning-button if:true={pagina1} onclick={avancar} label="Avançar"></lightning-button>
+            <lightning-button if:true={pagina2} onclick={salvar} variant="brand"  label="Salvar" ></lightning-button>
+        </div>
+    </lightning-quick-action-panel>
+</template>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Indicador__c</fullName>
+    <externalId>false</externalId>
+    <label>Indicador</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Categoria__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Turmas</fullName>
+                <default>false</default>
+                <label>Turmas</label>
+            </value>
+            <value>
+                <fullName>alunos/turmas</fullName>
+                <default>false</default>
+                <label>alunos/turmas</label>
+            </value>
+            <value>
+                <fullName>Cadastro alunos</fullName>
+                <default>false</default>
+                <label>Cadastro alunos</label>
+            </value>
+            <value>
+                <fullName>Controle de frequência</fullName>
+                <default>false</default>
+                <label>Controle de frequência</label>
+            </value>
+            <value>
+                <fullName>Aval esportiva</fullName>
+                <default>false</default>
+                <label>Aval esportiva</label>
+            </value>
+            <value>
+                <fullName>Aval socioemocional</fullName>
+                <default>false</default>
+                <label>Aval socioemocional</label>
+            </value>
+            <value>
+                <fullName>Notas</fullName>
+                <default>false</default>
+                <label>Notas</label>
+            </value>
+            <value>
+                <fullName>Aprovação</fullName>
+                <default>false</default>
+                <label>Aprovação</label>
+            </value>
+            <value>
+                <fullName>Reunião famílias</fullName>
+                <default>false</default>
+                <label>Reunião famílias</label>
+            </value>
+            <value>
+                <fullName>Tarefas curso</fullName>
+                <default>false</default>
+                <label>Tarefas curso</label>
+            </value>
+            <value>
+                <fullName>Presença encontro</fullName>
+                <default>false</default>
+                <label>Presença encontro</label>
+            </value>
+            <value>
+                <fullName>Planejamento sem</fullName>
+                <default>false</default>
+                <label>Planejamento sem</label>
+            </value>
+            <value>
+                <fullName>Passaporte</fullName>
+                <default>false</default>
+                <label>Passaporte</label>
+            </value>
+            <value>
+                <fullName>Super Festival</fullName>
+                <default>false</default>
+                <label>Super Festival</label>
+            </value>
+            <value>
+                <fullName>Festival Superação</fullName>
+                <default>false</default>
+                <label>Festival Superação</label>
+            </value>
+            <value>
+                <fullName>Preparação espaço</fullName>
+                <default>false</default>
+                <label>Preparação espaço</label>
+            </value>
+            <value>
+                <fullName>Planejamento prévio</fullName>
+                <default>false</default>
+                <label>Planejamento prévio</label>
+            </value>
+            <value>
+                <fullName>Aprendizagem socioemocional</fullName>
+                <default>false</default>
+                <label>Aprendizagem socioemocional</label>
+            </value>
+            <value>
+                <fullName>Estratégias do DNA</fullName>
+                <default>false</default>
+                <label>Estratégias do DNA</label>
+            </value>
+            <value>
+                <fullName>Ambiente positivo</fullName>
+                <default>false</default>
+                <label>Ambiente positivo</label>
+            </value>
+            <value>
+                <fullName>Autoconfiança</fullName>
+                <default>false</default>
+                <label>Autoconfiança</label>
+            </value>
+            <value>
+                <fullName>Empatia</fullName>
+                <default>false</default>
+                <label>Empatia</label>
+            </value>
+            <value>
+                <fullName>Honestidade</fullName>
+                <default>false</default>
+                <label>Honestidade</label>
+            </value>
+            <value>
+                <fullName>Respeito</fullName>
+                <default>false</default>
+                <label>Respeito</label>
+            </value>
+            <value>
+                <fullName>Autonomia</fullName>
+                <default>false</default>
+                <label>Autonomia</label>
+            </value>
+            <value>
+                <fullName>Responsabilidade</fullName>
+                <default>false</default>
+                <label>Responsabilidade</label>
+            </value>
+            <value>
+                <fullName>Autocontrole</fullName>
+                <default>false</default>
+                <label>Autocontrole</label>
+            </value>
+            <value>
+                <fullName>Tomada de Decisão</fullName>
+                <default>false</default>
+                <label>Tomada de Decisão</label>
+            </value>
+            <value>
+                <fullName>Cooperação</fullName>
+                <default>false</default>
+                <label>Cooperação</label>
+            </value>
+            <value>
+                <fullName>Comunicação</fullName>
+                <default>false</default>
+                <label>Comunicação</label>
+            </value>
+            <value>
+                <fullName>Persistência</fullName>
+                <default>false</default>
+                <label>Persistência</label>
+            </value>
+            <value>
+                <fullName>Resiliência</fullName>
+                <default>false</default>
+                <label>Resiliência</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Disciplina</controllingFieldValue>
+            <valueName>Autonomia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disciplina</controllingFieldValue>
+            <valueName>Responsabilidade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coragem</controllingFieldValue>
+            <valueName>Autocontrole</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Coragem</controllingFieldValue>
+            <valueName>Tomada de Decisão</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Espírito de equipe</controllingFieldValue>
+            <valueName>Cooperação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Espírito de equipe</controllingFieldValue>
+            <valueName>Comunicação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Superação</controllingFieldValue>
+            <valueName>Persistência</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Superação</controllingFieldValue>
+            <valueName>Resiliência</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <valueName>Turmas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <valueName>alunos/turmas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <valueName>Cadastro alunos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <valueName>Controle de frequência</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Avaliações</controllingFieldValue>
+            <valueName>Aval esportiva</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Avaliações</controllingFieldValue>
+            <valueName>Aval socioemocional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Avaliações</controllingFieldValue>
+            <valueName>Notas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Avaliações</controllingFieldValue>
+            <valueName>Aprovação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Reunião com famílias</controllingFieldValue>
+            <valueName>Reunião famílias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Formação</controllingFieldValue>
+            <valueName>Tarefas curso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Formação</controllingFieldValue>
+            <valueName>Presença encontro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planejamento do semestre</controllingFieldValue>
+            <valueName>Planejamento sem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planejamento do semestre</controllingFieldValue>
+            <valueName>Passaporte</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eventos</controllingFieldValue>
+            <valueName>Super Festival</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Eventos</controllingFieldValue>
+            <valueName>Festival Superação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preparação para o treino</controllingFieldValue>
+            <valueName>Preparação espaço</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preparação para o treino</controllingFieldValue>
+            <valueName>Planejamento prévio</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Preparação para o treino</controllingFieldValue>
+            <valueName>Aprendizagem socioemocional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Condução do treino</controllingFieldValue>
+            <valueName>Estratégias do DNA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Condução do treino</controllingFieldValue>
+            <valueName>Ambiente positivo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amor</controllingFieldValue>
+            <valueName>Autoconfiança</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Amor</controllingFieldValue>
+            <valueName>Empatia</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Humildade</controllingFieldValue>
+            <valueName>Honestidade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Humildade</controllingFieldValue>
+            <valueName>Respeito</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

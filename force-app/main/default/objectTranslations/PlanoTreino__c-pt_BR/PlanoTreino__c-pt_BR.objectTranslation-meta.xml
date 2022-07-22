@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plano de treino</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Planos de treinos</value>
+    </caseValues>
+    <gender>Masculine</gender>
+    <layouts>
+        <layout>Layout de Plano de treino</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <webLinks>
+        <label></label>
+        <name>Imprimir</name>
+    </webLinks>
+</CustomObjectTranslation>

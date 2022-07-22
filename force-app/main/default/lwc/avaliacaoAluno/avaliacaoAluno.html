@@ -1,0 +1,60 @@
+<template>
+    <lightning-quick-action-panel header="Avaliação Tutor - Treinador">
+        
+        <div class="slds-grid slds-wrap">
+            <div class="slds-size_4-of-4">
+                <lightning-combobox
+                    label="Selecione o ano da avaliação"
+                    name="anoAvaliacao"
+                    placeholder="Selecione o ano"
+                    value={anos}
+                    onchange={atualizarValoresAnos}
+                    options={anos}
+                    required>
+                </lightning-combobox>
+            </div>
+        </div>
+
+
+        <template if:true={exibir}>
+            <br/>
+            <div class= "slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-align_absolute-center">
+                        <label>Nível Esportivo</label>
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <img style="width: 86px;" src={resultadoEsportivo}>
+                    </div>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <div class="slds-align_absolute-center">
+                        <label>Nível Socioemocional</label><br/>
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <img style="width: 86px;" src={resultadoSocioemocional}>
+                    </div>
+                </div>
+                <!-- <div class="slds-col slds-size_1-of-3">
+                    <div class="slds-align_absolute-center">
+                        <label>Nível do aluno</label><br/>
+                    </div>
+                    <div class="slds-align_absolute-center">
+                        <img style="width: 86px;" src={resultadoFinal}>
+                    </div>
+                </div> -->
+            </div>
+        </template>
+
+        <template if:false={exibir}>
+            <br/>
+            <div class= "slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="slds-align_absolute-center">
+                        <label>{Mensagem}</label>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </lightning-quick-action-panel>
+</template>

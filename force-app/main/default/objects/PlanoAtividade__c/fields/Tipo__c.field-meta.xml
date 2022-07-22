@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <description>Campo picklist que contém o nome do tipo da atividade a ser realizada.</description>
+    <externalId>false</externalId>
+    <label>Tipo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Desafios coordenativos</fullName>
+                <default>false</default>
+                <label>Desafios coordenativos</label>
+            </value>
+            <value>
+                <fullName>Desafios técnico-táticos e socioemocionais</fullName>
+                <default>false</default>
+                <label>Desafios técnico-táticos e socioemocionais</label>
+            </value>
+            <value>
+                <fullName>Jogos de criatividade</fullName>
+                <default>false</default>
+                <label>Jogos de criatividade</label>
+            </value>
+            <value>
+                <fullName>Jogos reduzidos e jogo formal</fullName>
+                <default>false</default>
+                <label>Jogos reduzidos e jogo formal</label>
+            </value>
+            <value>
+                <fullName>Roda final</fullName>
+                <default>false</default>
+                <label>Roda final</label>
+            </value>
+            <value>
+                <fullName>Roda Inicial</fullName>
+                <default>false</default>
+                <label>Roda Inicial</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

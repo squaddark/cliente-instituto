@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentAsset xmlns="http://soap.sforce.com/2006/04/metadata">
+    <isVisibleByExternalUsers>false</isVisibleByExternalUsers>
+    <language>pt_BR</language>
+    <masterLabel>X522A2A4335F638674BE78706B579CA65B3E</masterLabel>
+    <originNetwork>Instituto_Superacao</originNetwork>
+    <relationships>
+        <network>
+            <access>VIEWER</access>
+            <name>Instituto_Superacao</name>
+        </network>
+        <workspace>
+            <access>INFERRED</access>
+            <isManagingWorkspace>true</isManagingWorkspace>
+            <name>sfdc_asset_company_assets</name>
+        </workspace>
+    </relationships>
+    <versions>
+        <version>
+            <number>1</number>
+            <pathOnClient>522A2A4335F638674BE78706B579CA65B3E3151506CDABC0F684C23BC2BFA780.png</pathOnClient>
+        </version>
+    </versions>
+</ContentAsset>

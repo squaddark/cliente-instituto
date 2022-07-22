@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conceito__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  ISPICKVAL(TipoAvaliacao__c , &quot;Técnica&quot;) ,
+ 
+  (IF(TotalPontos__c &gt;=15.1, &quot;Ótimo&quot;, 
+   IF(TotalPontos__c &gt;=12.1, &quot;Muito Bom&quot;,  
+   IF(TotalPontos__c &gt;=9.1, &quot;Bom&quot;,  
+   IF(TotalPontos__c &gt;=4.1, &quot;Regular&quot;,&quot;Ruim&quot;))))),
+
+ (IF(TotalPontos__c &gt;=30.1, &quot;Ótimo&quot;,
+ IF(TotalPontos__c &gt;=24.1, &quot;Muito Bom&quot;,
+ IF(TotalPontos__c &gt;=18.1, &quot;Bom&quot;,
+ IF(TotalPontos__c &gt;=12.1, &quot;Regular&quot;,&quot;Ruim&quot;))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Conceito</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

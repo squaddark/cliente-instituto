@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>54.0</apiVersion>
+    <assignments>
+        <name>AtribuiEscola_0</name>
+        <label>Atribui escola</label>
+        <locationX>50</locationX>
+        <locationY>575</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.Local__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.NomeTurma__r.NomeEscola__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>ExisteContato</name>
+        <label>Existe contato</label>
+        <locationX>380</locationX>
+        <locationY>335</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Sim</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.ContactId</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>VerificaPapelTreinador</targetReference>
+            </connector>
+            <label>Sim</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>VerificaPapelTreinador</name>
+        <label>Verifica Papel Treinador</label>
+        <locationX>182</locationX>
+        <locationY>455</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>OwnerDesenvolvimento</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Contact.PapelEquipe__c</leftValueReference>
+                <operator>Contains</operator>
+                <rightValue>
+                    <stringValue>Treinador - Desenvolvimento</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.CreatedBy.Profile.Name</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Treinador</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>AtribuiEscola_0</targetReference>
+            </connector>
+            <label>Owner Desenvolvimento</label>
+        </rules>
+    </decisions>
+    <interviewLabel>AtribuiLocalGradeHoraria {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>AtribuiLocalGradeHoraria</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Update</name>
+        <label>Update</label>
+        <locationX>50</locationX>
+        <locationY>695</locationY>
+        <inputAssignments>
+            <field>Local__c</field>
+            <value>
+                <elementReference>$Record.NomeTurma__r.NomeEscola__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>254</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>ExisteContato</targetReference>
+        </connector>
+        <object>GradeHoraria__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

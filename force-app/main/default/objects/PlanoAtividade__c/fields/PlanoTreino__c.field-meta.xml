@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PlanoTreino__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Campo lookup que retorna os Planos de Treinos disponiveis</description>
+    <externalId>false</externalId>
+    <label>Plano de treino</label>
+    <referenceTo>PlanoTreino__c</referenceTo>
+    <relationshipLabel>Planos de Atividades</relationshipLabel>
+    <relationshipName>Planos_de_Atividades</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

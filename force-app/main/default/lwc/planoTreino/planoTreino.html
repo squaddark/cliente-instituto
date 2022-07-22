@@ -1,0 +1,1218 @@
+<template>
+    <lightning-quick-action-panel header="Plano de treino">
+        <template if:true={pagina1}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2" style="padding-right: 5px;">
+                    <lightning-input type="date" name="data" onchange={dataPlanoChange} value={dataPlanoSelecionado} label="Selecione a data"></lightning-input>
+                </div>
+                <div if:false={isLoaded} class="slds-is-relative">
+                    <lightning-spinner
+                        alternative-text="Loading..." variant="brand">
+                    </lightning-spinner>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <lightning-combobox name="tipotreino"
+                        label="Tipo de treino"
+                        placeholder="Selecione o tipo de treino"
+                        value={tipoTreinoSelecionado}
+                        options={tipoTreinoOptions}
+                        onchange={tipoTreinoChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_full">
+                    <lightning-input name="nomePlano" label="Nome do plano de treino" onchange={nomePlanoChange} value={nomePlano} style="--sds-c-textarea-sizing-min-height: 200px;" ></lightning-input>
+                </div>
+                <div class="slds-col slds-size_full">
+                    <lightning-textarea name="objetivo" label="Objetivo" onchange={objetivoChange} value={objetivoTreino} style="--sds-c-textarea-sizing-min-height: 200px;" ></lightning-textarea>
+                </div>
+            </div>
+        </template>    
+        
+        <template if:true={pagina2}>
+            <div class="slds-scrollable" style="width:33rem; min-height: 200px;">
+                <div class="slds-text-longform" style="width:100%">
+                    <template if:true={linha1}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao1"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao1}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura1"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura1}
+                                    options={estruturaOptions1}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo1"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo1}
+                                    options={tipoOptions1}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo1"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo1}
+                                    options={conteudoAplicadoOptions1}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento1"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento1}
+                                    options={complementoConteudoOptions1}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha2}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao2"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao2}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura2"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura2}
+                                    options={estruturaOptions2}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo2"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo2}
+                                    options={tipoOptions2}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo2"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo2}
+                                    options={conteudoAplicadoOptions2}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento2"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento2}
+                                    options={complementoConteudoOptions2}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha3}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao3"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao3}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura3"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura3}
+                                    options={estruturaOptions3}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo3"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo3}
+                                    options={tipoOptions3}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo3"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo3}
+                                    options={conteudoAplicadoOptions3}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento3"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento3}
+                                    options={complementoConteudoOptions3}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha4}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao4"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao4}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura4"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura4}
+                                    options={estruturaOptions4}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo4"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo4}
+                                    options={tipoOptions4}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo4"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo4}
+                                    options={conteudoAplicadoOptions4}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento4"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento4}
+                                    options={complementoConteudoOptions4}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha5}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao5"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao5}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura5"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura5}
+                                    options={estruturaOptions5}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo5"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo5}
+                                    options={tipoOptions5}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo5"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo5}
+                                    options={conteudoAplicadoOptions5}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento5"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento5}
+                                    options={complementoConteudoOptions5}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha6}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao6"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao6}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura6"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura6}
+                                    options={estruturaOptions6}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo6"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo6}
+                                    options={tipoOptions6}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo6"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo6}
+                                    options={conteudoAplicadoOptions6}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento6"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento6}
+                                    options={complementoConteudoOptions6}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha7}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao7"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao7}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura7"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura7}
+                                    options={estruturaOptions7}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo7"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo7}
+                                    options={tipoOptions7}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo7"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo7}
+                                    options={conteudoAplicadoOptions7}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento7"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento7}
+                                    options={complementoConteudoOptions7}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha8}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao8"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao8}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura8"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura8}
+                                    options={estruturaOptions8}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo8"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo8}
+                                    options={tipoOptions8}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo8"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo8}
+                                    options={conteudoAplicadoOptions8}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento8"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento8}
+                                    options={complementoConteudoOptions8}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha9}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao9"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao9}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura9"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura9}
+                                    options={estruturaOptions9}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo9"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo9}
+                                    options={tipoOptions9}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo9"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo9}
+                                    options={conteudoAplicadoOptions9}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento9"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento9}
+                                    options={complementoConteudoOptions9}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha10}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao10"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao10}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura10"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura10}
+                                    options={estruturaOptions10}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo10"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo10}
+                                    options={tipoOptions10}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo10"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo10}
+                                    options={conteudoAplicadoOptions10}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento10"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento10}
+                                    options={complementoConteudoOptions10}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha11}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao11"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao11}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura11"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura11}
+                                    options={estruturaOptions11}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo11"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo11}
+                                    options={tipoOptions11}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo11"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo11}
+                                    options={conteudoAplicadoOptions11}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento11"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento11}
+                                    options={complementoConteudoOptions11}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha12}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao12"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao12}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura12"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura12}
+                                    options={estruturaOptions12}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo12"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo12}
+                                    options={tipoOptions12}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo12"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo12}
+                                    options={conteudoAplicadoOptions12}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento12"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento12}
+                                    options={complementoConteudoOptions12}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha13}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao13"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao13}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura13"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura13}
+                                    options={estruturaOptions13}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo13"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo13}
+                                    options={tipoOptions13}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo13"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo13}
+                                    options={conteudoAplicadoOptions13}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento13"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento13}
+                                    options={complementoConteudoOptions13}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha14}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao14"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao14}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura14"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura14}
+                                    options={estruturaOptions14}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo14"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo14}
+                                    options={tipoOptions14}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo14"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo14}
+                                    options={conteudoAplicadoOptions14}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento14"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento14}
+                                    options={complementoConteudoOptions14}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha15}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao15"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao15}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura15"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura15}
+                                    options={estruturaOptions15}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo15"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo15}
+                                    options={tipoOptions15}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo15"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo15}
+                                    options={conteudoAplicadoOptions15}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento15"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento15}
+                                    options={complementoConteudoOptions15}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha16}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao16"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao16}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura16"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura16}
+                                    options={estruturaOptions16}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo16"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo16}
+                                    options={tipoOptions16}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo16"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo16}
+                                    options={conteudoAplicadoOptions16}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento16"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento16}
+                                    options={complementoConteudoOptions16}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha17}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao17"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao17}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura17"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura17}
+                                    options={estruturaOptions17}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo17"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo17}
+                                    options={tipoOptions17}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo17"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo17}
+                                    options={conteudoAplicadoOptions17}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento17"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento17}
+                                    options={complementoConteudoOptions17}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha18}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao18"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao18}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura18"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura18}
+                                    options={estruturaOptions18}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo18"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo18}
+                                    options={tipoOptions18}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo18"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo18}
+                                    options={conteudoAplicadoOptions18}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento18"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento18}
+                                    options={complementoConteudoOptions18}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha19}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao19"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao19}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura19"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura19}
+                                    options={estruturaOptions19}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo19"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo19}
+                                    options={tipoOptions19}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo19"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo19}
+                                    options={conteudoAplicadoOptions19}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento19"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento19}
+                                    options={complementoConteudoOptions19}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template>
+
+                    <template if:true={linha20}>
+                        <div class="slds-grid slds-wrap">
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="dimensao20"
+                                    label="Dimensão"
+                                    placeholder="Selecione a dimensão"
+                                    value={dimensao20}
+                                    options={dimensaoOptions}
+                                    onchange={handleDimensaoChange}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="estrutura20"
+                                    label="Estrutura"
+                                    placeholder="Selecione a estrutura"
+                                    value={estrutura20}
+                                    options={estruturaOptions20}
+                                    onchange={handleEstruturaChange}
+                                    onfocus={handleEstruturaClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="tipo20"
+                                    label="Tipo"
+                                    placeholder="Selecione o tipo"
+                                    value={tipo20}
+                                    options={tipoOptions20}
+                                    onchange={handleTipoChange}
+                                    onfocus={handleTipoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5" style="padding-right: 5px;">
+                                <lightning-combobox name="conteudo20"
+                                    label="Conteúdo"
+                                    placeholder="Selecione o conteúdo"
+                                    value={conteudo20}
+                                    options={conteudoAplicadoOptions20}
+                                    onchange={handleConteudoChange}
+                                    onfocus={handleConteudoClick}>
+                                </lightning-combobox>
+                            </div>
+                            <div class="slds-col slds-size_1-of-5">
+                                <lightning-combobox name="complemento20"
+                                    label="Complemento"
+                                    placeholder="Selecione o complemento"
+                                    value={complemento20}
+                                    options={complementoConteudoOptions20}
+                                    onchange={handleComplementoConteudoChange}
+                                    onfocus={handleComplementoClick}>
+                                </lightning-combobox>
+                            </div>
+                        </div>
+                    </template> 
+                </div>
+            </div>
+            
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-2" style="margin-top: 5px;">
+                    <lightning-button label="Adicionar conteúdo" icon-name="utility:add" title="Adicionar nova linhar de conteúdo" onclick={handleClickAddConteudo}></lightning-button>
+                </div>
+            </div>
+        </template>    
+
+        <template if:true={pagina3}>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 30px;">
+                    <p>Roda inicial</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade1" value={tempoAtividade1} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado1" value={tempoRealizado1} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade1" value={atividade1} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 10px;">
+                    <p>Jogos de criatividade</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade2" value={tempoAtividade2} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado2" value={tempoRealizado2} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade2" value={atividade2} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 10px;">
+                    <p>Desafios coordenativos</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade3" value={tempoAtividade3} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado3" value={tempoRealizado3} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade3" value={atividade3} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 10px;">
+                    <p>Desafios técnico-táticos e socioemocionais</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade4" value={tempoAtividade4} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado4" value={tempoRealizado4} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade4" value={atividade4} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 10px;">
+                    <p>Jogos reduzidos e jogo formal</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade5" value={tempoAtividade5} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado5" value={tempoRealizado5} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade5" value={atividade5} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_1-of-5" style="padding-right: 5px; margin-top: 30px;">
+                    <p>Roda final</p>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoAtividade6" value={tempoAtividade6} label="Tempo planejado" type="number" onchange={changeTempoAtividade}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4" style="padding-right: 5px;">
+                    <lightning-input name="tempoRealizado6" value={tempoRealizado6} label="Tempo realizado" type="number" onchange={changeTempoRealizado}></lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-4">
+                    <lightning-textarea name="atividade6" value={atividade6} label="Atividade" onchange={changeAtividade}></lightning-textarea>
+                </div>
+            </div>
+        </template>    
+
+        <div slot="footer">
+            <lightning-button variant="brand" label="Gerar PDF" class="slds-m-left_x-small" onclick={handlePdfClick} hidden={btnVisualizar}></lightning-button>
+            <lightning-button variant="brand" label="Voltar" class="slds-m-left_x-small" onclick={voltarPagina} hidden={pagina1}></lightning-button>
+            <lightning-button variant="brand" label="Avançar" onclick={avancarPagina} class="slds-m-left_x-small" hidden={pagina3}></lightning-button>
+            <lightning-button variant="brand" label="Salvar" onclick={salvarDados} class="slds-m-left_x-small" hidden={showBtnSalvar}></lightning-button>
+        </div>
+      </lightning-quick-action-panel>
+</template>

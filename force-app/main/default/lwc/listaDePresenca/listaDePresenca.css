@@ -1,0 +1,116 @@
+.slds-grid{
+    margin-left: 10px;
+    margin-right: -85px;
+}
+
+.space{
+    margin: 20px;
+}
+
+.spaceTable{
+    margin: 10px;
+}
+
+lightning-combobox{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.slds-text-heading_medium{
+    font-weight: bold;
+}
+
+.porcentagem{
+   margin-left: 35px;
+}
+
+.tipo{
+    margin-left: 450px;
+}
+
+.spaceBtnCombo{
+    margin-right: 10px;
+}
+
+.spaceBtnComboDia{
+    margin-right: 10px;
+    margin-top: 0.5rem;
+}
+
+.spaceFooter{
+    margin: 40px;
+}
+
+lightning-formatted-text{
+    font-size: 12px;
+}
+
+lightning-button-menu{
+    color: black;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+label{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color:dimgray;
+    font-size: 12px;
+}
+
+/* DESKTOP */
+.btnDiaDesktop{
+    margin-top: 25px;
+}
+
+.btnDia{
+    margin-top: 24px;
+    font-size: small;
+    margin-left: 0.5rem;
+}
+
+.btnPresenca{
+    margin-top: 24px;
+    font-size: small;
+    margin-left: 0.6rem;
+    margin-right: 2.3rem;
+}
+
+
+/* PHONE */
+.btnDiaMobile{
+    margin-top: 32px;
+    font-size: small;
+    margin-left: 1.0rem;
+}
+
+.DiaMobileCombobox{
+    margin-left: 10px;
+}
+
+.comboboxStatusMobile{
+    margin-bottom: 1.3rem;
+}
+
+.negrito{
+    font-weight: bold;
+}
+
+.margin-bottom-6{
+    margin-bottom: 6px;
+}
+
+.slds-p-around_medium, .slds-p-around--medium{
+    padding: 0% !important;
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Categoria__c</fullName>
+    <externalId>false</externalId>
+    <label>Categoria</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Dimensao__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Turmas</fullName>
+                <default>false</default>
+                <label>Turmas</label>
+            </value>
+            <value>
+                <fullName>Avaliações</fullName>
+                <default>false</default>
+                <label>Avaliações</label>
+            </value>
+            <value>
+                <fullName>Reunião com famílias</fullName>
+                <default>false</default>
+                <label>Reunião com famílias</label>
+            </value>
+            <value>
+                <fullName>Formação</fullName>
+                <default>false</default>
+                <label>Formação</label>
+            </value>
+            <value>
+                <fullName>Planejamento do semestre</fullName>
+                <default>false</default>
+                <label>Planejamento do semestre</label>
+            </value>
+            <value>
+                <fullName>Eventos</fullName>
+                <default>false</default>
+                <label>Eventos</label>
+            </value>
+            <value>
+                <fullName>Preparação para o treino</fullName>
+                <default>false</default>
+                <label>Preparação para o treino</label>
+            </value>
+            <value>
+                <fullName>Condução do treino</fullName>
+                <default>false</default>
+                <label>Condução do treino</label>
+            </value>
+            <value>
+                <fullName>Amor</fullName>
+                <default>false</default>
+                <label>Amor</label>
+            </value>
+            <value>
+                <fullName>Humildade</fullName>
+                <default>false</default>
+                <label>Humildade</label>
+            </value>
+            <value>
+                <fullName>Disciplina</fullName>
+                <default>false</default>
+                <label>Disciplina</label>
+            </value>
+            <value>
+                <fullName>Coragem</fullName>
+                <default>false</default>
+                <label>Coragem</label>
+            </value>
+            <value>
+                <fullName>Espírito de equipe</fullName>
+                <default>false</default>
+                <label>Espírito de equipe</label>
+            </value>
+            <value>
+                <fullName>Superação</fullName>
+                <default>false</default>
+                <label>Superação</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Gestão</controllingFieldValue>
+            <valueName>Turmas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gestão</controllingFieldValue>
+            <valueName>Avaliações</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gestão</controllingFieldValue>
+            <valueName>Reunião com famílias</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Gestão</controllingFieldValue>
+            <valueName>Formação</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pedagógica</controllingFieldValue>
+            <valueName>Planejamento do semestre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pedagógica</controllingFieldValue>
+            <valueName>Eventos</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pedagógica</controllingFieldValue>
+            <valueName>Preparação para o treino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pedagógica</controllingFieldValue>
+            <valueName>Condução do treino</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Amor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Humildade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Disciplina</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Coragem</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Espírito de equipe</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Atitudinal</controllingFieldValue>
+            <valueName>Superação</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estrutura__c</fullName>
+    <externalId>false</externalId>
+    <label>Estrutura</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Dimensao__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>1X0 COM BOLA - ATAQUE</fullName>
+                <default>false</default>
+                <label>1X0 COM BOLA - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>1X1 COM BOLA - ATAQUE</fullName>
+                <default>false</default>
+                <label>1X1 COM BOLA - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>1X1 NA BOLA - DEFESA</fullName>
+                <default>false</default>
+                <label>1X1 NA BOLA - DEFESA</label>
+            </value>
+            <value>
+                <fullName>2x2 COM BOLA - ATAQUE</fullName>
+                <default>false</default>
+                <label>2x2 COM BOLA - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>2x2 FORA DA BOLA - DEFESA</fullName>
+                <default>false</default>
+                <label>2x2 FORA DA BOLA - DEFESA</label>
+            </value>
+            <value>
+                <fullName>2x2 SEM BOLA - ATAQUE</fullName>
+                <default>false</default>
+                <label>2x2 SEM BOLA - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>3X3 FORA DA BOLA - DEFESA</fullName>
+                <default>false</default>
+                <label>3X3 FORA DA BOLA - DEFESA</label>
+            </value>
+            <value>
+                <fullName>3X3 SEM BOLA - ATAQUE</fullName>
+                <default>false</default>
+                <label>3X3 SEM BOLA - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>4X4 FORA DA BOLA - DEFESA</fullName>
+                <default>false</default>
+                <label>4X4 FORA DA BOLA - DEFESA</label>
+            </value>
+            <value>
+                <fullName>4X4 SEM BOLA  ATAQUE</fullName>
+                <default>false</default>
+                <label>4X4 SEM BOLA  ATAQUE</label>
+            </value>
+            <value>
+                <fullName>JOGO FORMAL (5X5)  - ATAQUE</fullName>
+                <default>false</default>
+                <label>JOGO FORMAL (5X5)  - ATAQUE</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>1X0 COM BOLA - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>1X1 COM BOLA - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>1X1 NA BOLA - DEFESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>2x2 COM BOLA - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>2x2 FORA DA BOLA - DEFESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>2x2 SEM BOLA - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>3X3 FORA DA BOLA - DEFESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>3X3 SEM BOLA - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>4X4 FORA DA BOLA - DEFESA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>4X4 SEM BOLA  ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>JOGO FORMAL (5X5)  - ATAQUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO ESPORTIVO</controllingFieldValue>
+            <valueName>NA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESENVOLVIMENTO SOCIOEMOCIONAL</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

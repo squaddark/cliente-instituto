@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Programa__c</name>
+    <picklistValues>
+        <masterLabel>Pilar competitivo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pilar desenvolvimento</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

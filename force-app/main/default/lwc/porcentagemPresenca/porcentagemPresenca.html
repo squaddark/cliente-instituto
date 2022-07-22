@@ -1,0 +1,134 @@
+<template>
+    <!--Header-->
+    <div class="slds-m-bottom_small slds-page-header">
+        <div class="slds-media">
+            <div class="slds-media__figure">
+                <lightning-icon icon-name="utility:percent" size="medium" variant="slds-icon-inverse"></lightning-icon>
+            </div>
+            <div class="slds-media__body">
+                <div class="slds-page-header__title slds-text-heading_medium">Porcentagem de Presença</div>
+            </div>
+            <div class="slds-media__figure slds-media__figure_reverse"></div>
+        </div>
+    </div>
+        
+    <div class="bg-white">
+            <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade">
+                        <span class="slds-truncate slds-p-horizontal_small" title="Seleção de data"> Seleção de  data </span>
+                    </h3>
+
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-size_1-of-5 spaceBtnCombo">
+                            <lightning-combobox options={anos} label="Ano" value={selectedAno} onchange={selectAno}> </lightning-combobox>
+                        </div>
+                        <div class="slds-size_1-of-3 spaceBtnCombo">
+                            <lightning-combobox options={meses} label="Mês" value={selectedMes} onchange={selectMes}> </lightning-combobox>
+                        </div>
+                        <div if:true={isDesktop} class="slds-size_1-of-4 calcular">
+                            <lightning-button variant="brand" label="Média da presença" title="Calcular" onclick={calculoPorcentagem}> </lightning-button>
+                        </div>
+                        <div if:true={isPhone} class="slds-size_1-of-4 calcularMobile">
+                            <lightning-button variant="brand" label="Média da presença" title="Calcular" onclick={calculoPorcentagem}> </lightning-button>
+                        </div>
+                    </div>
+
+            </div>
+
+            <div class="space"> </div>
+
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Presença"> Presença </span>
+                </h3>
+            <div class="spaceTable"> </div>
+            
+                <template if:true={listaVisivel}>
+                    <div class="scrollTable">
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="Alunos">Alunos</div>
+                                    </th>
+                                        <template for:each={list} for:item="item">
+                                            <th key={item} class="colunaDias">{item}</th>    
+                                        </template>
+                                    <th scope="col">
+                                        <div class="slds-truncate " title="presenca"><span class="center">Total de presenças</span></div>
+                                    </th>
+                                    <th scope="col">
+                                        <div class="slds-truncate " title="faltas"><span class="center">Total de faltas</span> </div>
+                                    </th>
+    
+                                    <th scope="col">
+                                        <div class="slds-truncate " title="% de presença"><span class="center"></span>% de presença</div>
+                                    </th>
+                                </tr>
+                            </thead>
+    
+                            <tbody> 
+                                <template for:each={alunos} for:item="aluno">
+                                    <tr key={aluno.id} class="border-table-line">
+                                        <td>
+                                            <lightning-formatted-text value={aluno.nome}></lightning-formatted-text>                               
+                                        </td>
+                                        <template for:each={aluno.lstPresenca} for:item="item">
+                                            <td key={item}>{item}</td>    
+                                        </template>
+                                        <td>
+                                            <lightning-formatted-text value={aluno.diasPresente}></lightning-formatted-text>                               
+                                        </td>
+                                        <td>
+                                            <lightning-formatted-text value={aluno.diasAusente}></lightning-formatted-text>                               
+                                        </td>
+                                        <td>
+                                            <lightning-formatted-text value={aluno.porcentagemPresenca}></lightning-formatted-text>                               
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                        <br>
+                        <br>
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="totais"></div>
+                                    </th>
+                                        <template for:each={list} for:item="item">
+                                            <th key={item} class="colunaDias">{item}</th>    
+                                        </template>
+                                    <th scope="col">
+                                        <div class="slds-truncate" title="% de presença">% de presença/mês</div>
+                                    </th>
+                                </tr>
+                            </thead>
+    
+                            <tbody> 
+                                <template for:each={listaTotais} for:item="total">
+                                    <tr key={total.name} class="border-table-line">
+                                        <td>
+                                            <lightning-formatted-text value={total.titulo}></lightning-formatted-text>                               
+                                        </td>
+                                        <template for:each={total.lista} for:item="item">
+                                            <td key={item}>{item}</td>    
+                                        </template>
+                                        <td>
+                                            <lightning-formatted-text value={total.mediaPorcentagem}></lightning-formatted-text>                               
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                </template>
+
+                <footer class="slds-modal__footer slds-align_absolute-center">
+                    <lightning-button class="spaceBtnCombo" variant="neutral" label="Cancelar" title="Cancelar" onclick={closeQuickAction}> </lightning-button>
+                </footer>
+            </div>
+        </div>
+</template>

@@ -1,0 +1,47 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jul 11 2022 17:00:43",
+    "testExecutionTimeInMs": 0,
+    "testTotalTimeInMs": 0,
+    "commandTimeInMs": 842,
+    "hostname": "https://sup-sandbox--superacao.my.salesforce.com",
+    "orgId": "00DZ0000009T1zfMAC",
+    "username": "everymind@institutosuperacao.org.br.superacao",
+    "testRunId": "707Z000002NpVpn",
+    "userId": "0054W00000CgmUSQAZ"
+  },
+  "tests": [
+    {
+      "id": "07MZ0000008vwr9MAA",
+      "queueItemId": "709Z0000001RKUDIA4",
+      "stackTrace": null,
+      "message": "line 1216, column 51: Method does not exist or incorrect signature: void contarAlunosComNota(String) from the type AvaliacaoController",
+      "asyncApexJobId": "707Z000002NpVpnIAF",
+      "methodName": "<compile>",
+      "outcome": "CompileFail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01pZ0000002NQcTIAW",
+        "name": "AvaliacaoTutorTest",
+        "namespacePrefix": null,
+        "fullName": "AvaliacaoTutorTest"
+      },
+      "runTime": 0,
+      "testTimestamp": "2022-07-11T20:00:44.000+0000",
+      "fullName": "AvaliacaoTutorTest.<compile>",
+      "diagnostic": {
+        "exceptionMessage": "line 1216, column 51: Method does not exist or incorrect signature: void contarAlunosComNota(String) from the type AvaliacaoController",
+        "exceptionStackTrace": null,
+        "compileProblem": ""
+      }
+    }
+  ]
+}

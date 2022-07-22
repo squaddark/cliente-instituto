@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>standard-home</defaultLandingTab>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <tabs>standard-Chatter</tabs>
+    <tabs>standard-UserProfile</tabs>
+    <tabs>standard-CollaborationGroup</tabs>
+    <tabs>standard-File</tabs>
+    <tabs>standard-Lead</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>standard-Opportunity</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>standard-Product2</tabs>
+    <tabs>standard-Forecasting3</tabs>
+    <tabs>Chamada__c</tabs>
+    <tabs>IDEB__c</tabs>
+    <tabs>ResultadoAvaliacao__c</tabs>
+    <tabs>AvaliacaoTutor__c</tabs>
+    <tabs>NotaAcademica__c</tabs>
+    <tabs>ConteudoAplicado__c</tabs>
+    <tabs>JogoCompeticao__c</tabs>
+    <tabs>PlanoAtividade__c</tabs>
+    <tabs>TestesFisicosAntropometricos__c</tabs>
+    <tabs>PlanoTreino__c</tabs>
+    <tabs>AvaliacaoEsportivaSocioemocional__c</tabs>
+</CustomApplication>

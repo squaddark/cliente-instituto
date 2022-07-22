@@ -1,0 +1,141 @@
+.slds-grid{
+    margin-left: 10px;
+    margin-right: -85px;
+}
+
+.space{
+    margin: 20px;
+}
+
+.spaceTable{
+    margin: 10px;
+}
+
+.table1{
+    overflow: auto !important;
+}
+
+lightning-combobox{
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.combobox{
+    font-size: 7px !important;
+    font-weight: bold;
+    float: left;
+    width:50px;
+}
+
+.bg-white{
+    background-color: white;
+    padding: 5px;
+    margin-top: -15px;
+}
+
+h3{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.slds-text-heading_medium{
+    font-weight: bold;
+}
+
+select, option {
+    width: 75px; 
+}
+
+select{
+    cursor:pointer;
+    display:block;
+    position: relative;
+    font-size: 11px;
+    color:black;
+    border:1px solid #ccc;
+}   
+
+.porcentagem{
+   margin-left: 35px;
+}
+
+.tipo{
+    margin-left: 450px;
+}
+
+.spaceBtnCombo{
+    margin-right: 7px;
+}
+
+.spaceBtnComboTipo{
+    margin-right: 80px;
+}
+
+.spaceFooter{
+    margin: 40px;
+}
+
+.calcular{
+    margin-top: 1.5rem;
+}
+.calcularMobile{
+    margin-top: 2.0rem;
+}
+
+.baixo{
+    margin-bottom: 10px;
+}
+
+lightning-formatted-text{
+    font-size: 12px;
+}
+
+.direita{
+    margin-left: 25px;
+    font-weight: bold;
+}
+
+lightning-button-menu{
+    color: black;
+    margin-top: 5px;
+    margin-right: 25px;
+    margin-left: 10px;
+}
+
+label{
+    margin-top: 15px;
+    margin-left: 10px;
+    font-weight: bold;
+    color:dimgray;
+    font-size: 12px;
+}
+
+/* DESKTOP */
+.btnDiaDesktop{
+    margin-top: 25px;
+}
+
+/* PHONE */
+.btnDiaMobile{
+    margin-top: 32px;
+    font-size: small;
+}
+
+.DiaMobileCombobox{
+    margin-left: -10px;
+    margin-right: 10px;
+}
+
+.comboboxStatusMobile{
+    margin-bottom: 1.3rem;
+}
+
+/*COLUNAS E SCROLL*/
+.scrollTable{
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+.colunaDias{
+    width: 300px;
+}

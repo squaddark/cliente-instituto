@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApuracaoMedia4Notas__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND( 
+ Nota1__c &gt;0, 
+ Nota2__c &gt;0, 
+ Nota3__c &gt;0, 
+ Nota4__c &gt;0),&quot;Elegível&quot;,&quot;Não Elegivel&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Apuração média (4 notas)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

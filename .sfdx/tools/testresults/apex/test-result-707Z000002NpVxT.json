@@ -1,0 +1,50 @@
+{
+  "summary": {
+    "outcome": "Failed",
+    "testsRan": 1,
+    "passing": 0,
+    "failing": 1,
+    "skipped": 0,
+    "passRate": "0%",
+    "failRate": "100%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jul 11 2022 17:03:20",
+    "testExecutionTimeInMs": 5751,
+    "testTotalTimeInMs": 5751,
+    "commandTimeInMs": 662,
+    "hostname": "https://sup-sandbox--superacao.my.salesforce.com",
+    "orgId": "00DZ0000009T1zfMAC",
+    "username": "everymind@institutosuperacao.org.br.superacao",
+    "testRunId": "707Z000002NpVxT",
+    "userId": "0054W00000CgmUSQAZ"
+  },
+  "tests": [
+    {
+      "id": "07MZ0000008vwrJMAQ",
+      "queueItemId": "709Z0000001RKUNIA4",
+      "stackTrace": "Class.AvaliacaoTutorTest.testContarAlunosComNota: line 1219, column 1",
+      "message": "System.AssertException: Assertion Failed: Expected: 100, Actual: 0",
+      "asyncApexJobId": "707Z000002NpVxTIAV",
+      "methodName": "testContarAlunosComNota",
+      "outcome": "Fail",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01pZ0000002NQcTIAW",
+        "name": "AvaliacaoTutorTest",
+        "namespacePrefix": null,
+        "fullName": "AvaliacaoTutorTest"
+      },
+      "runTime": 5751,
+      "testTimestamp": "2022-07-11T20:03:21.000+0000",
+      "fullName": "AvaliacaoTutorTest.testContarAlunosComNota",
+      "diagnostic": {
+        "exceptionMessage": "System.AssertException: Assertion Failed: Expected: 100, Actual: 0",
+        "exceptionStackTrace": "Class.AvaliacaoTutorTest.testContarAlunosComNota: line 1219, column 1",
+        "className": "AvaliacaoTutorTest",
+        "compileProblem": "",
+        "lineNumber": 1219,
+        "columnNumber": 1
+      }
+    }
+  ]
+}

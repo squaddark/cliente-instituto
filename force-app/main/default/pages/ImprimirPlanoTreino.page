@@ -1,0 +1,69 @@
+<apex:page standardController="PlanoTreino__c" extensions="PlanoTreinoPDFController" renderAs="pdf">
+<div>
+    <div style="float: left">
+        <apex:image url="{!$Resource.logo}" width="265" height="100"/>
+    </div>    
+    <div>
+        <br/>
+        <h1>Plano de treino</h1>
+    </div>
+</div>
+<br/>
+<p>idenficador: <apex:outputText value="{!nomePlano}" /></p>
+
+
+<table border="1 solid" style="width: 100%">
+    <tr>
+        <td colspan="2">Escola: &nbsp; <apex:outputText value="{!escola}" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">Treinador: &nbsp; <apex:outputText value="{!treinador}" /></td>
+    </tr>
+    <tr>
+        <td>Tipo de treino: &nbsp; <apex:outputText value="{!tipoTreino}" /></td>
+        <td>Data: &nbsp; <apex:outputText value="{!dataPlano}" /></td>
+    </tr>
+    <tr>
+        <td colspan="2">Objetivos: &nbsp; <apex:outputText value="{!objetivo}" /></td>
+    </tr>
+</table>
+<br/>
+<h2>Plano de atividades</h2>
+<table border="1 solid" style="width: 100%">
+    <tr>
+        <th>Dimensão</th>
+        <th>Estrutura</th>
+        <th>Tipo</th>
+        <th>Conteúdo</th>
+        <th>Complemento de conteúdo</th>
+    </tr>
+    <apex:repeat value="{!planoTreino.classificacao}" var="classificacao">
+        <tr>
+            <td><apex:outputText value="{!classificacao.Dimensao}"/></td>
+            <td><apex:outputText value="{!classificacao.Estrutura}"/></td>
+            <td><apex:outputText value="{!classificacao.Tipo}"/></td>
+            <td><apex:outputText value="{!classificacao.Conteudo}"/></td>
+            <td><apex:outputText value="{!classificacao.Complemento}"/></td>
+        </tr>        
+    </apex:repeat>
+</table>
+
+<br/>
+<h2>Conteúdo aplicado</h2>
+<table border="1 solid" style="width: 100%">
+    <tr>
+        <th>Atividade</th>
+        <th>Tempo planejado</th>
+        <th>Tempo realizado</th>
+        <th>Atividade</th>
+    </tr>
+    <apex:repeat value="{!planoTreino.atividade}" var="atividade">
+        <tr>
+            <td><apex:outputText value="{!atividade.Tipo}"/></td>
+            <td><apex:outputText value="{!atividade.TempoPlanejado}"/></td>
+            <td><apex:outputText value="{!atividade.TempoRealizado}"/></td>
+            <td><apex:outputText value="{!atividade.Atividade}"/></td>
+        </tr>        
+    </apex:repeat>
+</table>
+</apex:page>

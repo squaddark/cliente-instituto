@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Turma</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Turmas</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout de Turma</layout>
+        <sections>
+            <label></label>
+            <section>Informações da turma</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>AdicionarAluno</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>AdicionarNotaAcademica</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>AvaliacaoDesempenho</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>GradeHoraria</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>ListaDePresenca</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>PlanoTreino</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>PorcentagemDePresenca</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>Teste</name>
+    </quickActions>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>PreencherPrograma</name>
+    </validationRules>
+</CustomObjectTranslation>

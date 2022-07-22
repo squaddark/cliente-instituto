@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AvaliacaoTutorCompacto</fullName>
+    <fields>Name</fields>
+    <fields>CodigoTreinador__c</fields>
+    <fields>DataPrimeiraVisita__c</fields>
+    <fields>DataSegundaVisita__c</fields>
+    <fields>MesReferencia__c</fields>
+    <label>AvaliacaoTutorCompacto</label>
+</CompactLayout>

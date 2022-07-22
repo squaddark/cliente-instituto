@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nivel_Socioemocional__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  NotaSocioemocionalA1__c  &lt; 13,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015Z00000037TXB&quot;, &quot;green&quot;, 30, 30),
+IF( NotaSocioemocionalA1__c &gt; 12 &amp;&amp; NotaSocioemocionalA1__c &lt; 30,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015Z00000037TXG&quot;, &quot;yellow&quot;, 30, 30),
+IF( NotaSocioemocionalA1__c &gt; 29 &amp;&amp; NotaSocioemocionalA1__c &lt; 47 ,
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015Z00000037TXL&quot;, &quot;orange&quot;, 30, 30),
+IMAGE(&quot;/servlet/servlet.FileDownload?file=015Z00000037TXQ&quot;, &quot;blue&quot;, 30, 30)
+)))</formula>
+    <label>Nível Socioemocional</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

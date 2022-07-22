@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Resultado__c</name>
+    <picklistValues>
+        <masterLabel>Derrota</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vitória</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

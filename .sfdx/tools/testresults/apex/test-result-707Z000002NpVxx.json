@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "outcome": "Passed",
+    "testsRan": 1,
+    "passing": 1,
+    "failing": 0,
+    "skipped": 0,
+    "passRate": "100%",
+    "failRate": "0%",
+    "skipRate": "0%",
+    "testStartTime": "Mon Jul 11 2022 17:03:53",
+    "testExecutionTimeInMs": 7869,
+    "testTotalTimeInMs": 7869,
+    "commandTimeInMs": 594,
+    "hostname": "https://sup-sandbox--superacao.my.salesforce.com",
+    "orgId": "00DZ0000009T1zfMAC",
+    "username": "everymind@institutosuperacao.org.br.superacao",
+    "testRunId": "707Z000002NpVxx",
+    "userId": "0054W00000CgmUSQAZ"
+  },
+  "tests": [
+    {
+      "id": "07MZ0000008vwrOMAQ",
+      "queueItemId": "709Z0000001RKUSIA4",
+      "stackTrace": null,
+      "message": null,
+      "asyncApexJobId": "707Z000002NpVxxIAF",
+      "methodName": "testContarAlunosComNota",
+      "outcome": "Pass",
+      "apexLogId": null,
+      "apexClass": {
+        "id": "01pZ0000002NQcTIAW",
+        "name": "AvaliacaoTutorTest",
+        "namespacePrefix": null,
+        "fullName": "AvaliacaoTutorTest"
+      },
+      "runTime": 7869,
+      "testTimestamp": "2022-07-11T20:03:53.000+0000",
+      "fullName": "AvaliacaoTutorTest.testContarAlunosComNota"
+    }
+  ]
+}

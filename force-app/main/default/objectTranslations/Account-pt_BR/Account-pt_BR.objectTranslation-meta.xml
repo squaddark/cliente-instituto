@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Escola</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Escolas</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Layout do pilar competitivo</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações da diretoria</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de endereço</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações do sistema</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Layout do pilar desenvolvimento</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Estrutura física</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações da diretoria</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações da parceria</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações de endereço</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações do sistema</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações gerais da escola</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Número de alunos por segmento da escola</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>New_Donation</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Grant</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_In_Kind_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Major_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Matching_Gift</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>New_Membership</name>
+    </quickActions>
+</CustomObjectTranslation>

@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Número de alunos por turma" icon-name="standard:apps_admin">
+        <lightning-layout>
+            <lightning-layout-item style="padding-left: 10px; padding-right: 10px;">
+                <lightning-datatable
+                    key-field="id"
+                    data={dataTurmas}
+                    columns={colunas}>
+                </lightning-datatable>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+
+    <lightning-card title="Número de desistências por turma" icon-name="standard:record_delete">
+        <lightning-layout>
+            <lightning-layout-item style="padding-left: 10px; padding-right: 10px;">
+                <lightning-datatable
+                    key-field="id"
+                    data={dataTurmasDesistencia}
+                    columns={colunasDesistencias}>
+                </lightning-datatable>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>

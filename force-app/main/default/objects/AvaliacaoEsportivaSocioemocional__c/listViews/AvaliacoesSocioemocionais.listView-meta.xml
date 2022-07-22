@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AvaliacoesSocioemocionais</fullName>
+    <columns>NAME</columns>
+    <columns>Ano_Base_Socioemocional__c</columns>
+    <columns>Turma__c</columns>
+    <columns>Aluno__c</columns>
+    <columns>AprovacaoAcademica__c</columns>
+    <columns>NivelSocioemocionalDoAluno__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>AvaliacaoEsportivaSocioemocional__c.Socioemocional</value>
+    </filters>
+    <label>Avaliações Socioemocionais</label>
+</ListView>

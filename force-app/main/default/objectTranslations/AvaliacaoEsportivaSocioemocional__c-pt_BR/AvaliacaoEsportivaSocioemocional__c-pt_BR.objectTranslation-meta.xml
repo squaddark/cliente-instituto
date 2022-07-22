@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Avaliação Esportiva e Socioemocional</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Avaliações Esportivas e Socioemocionais</value>
+    </caseValues>
+    <gender>Feminine</gender>
+    <layouts>
+        <layout>Avaliação Esportiva Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Esportivo - Avaliação 01</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Esportivo - Avaliação 02</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Esportivo - Avaliação 03</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Avaliação Esportiva e Socioemocional Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Avaliação Socioemocional Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Socioemocionais - Avaliação 01</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Socioemocionais - Avaliação 02</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Indicadores Socioemocionais - Avaliação 03</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label></label>
+        <name>Esportivo</name>
+    </recordTypes>
+    <recordTypes>
+        <label></label>
+        <name>Socioemocional</name>
+    </recordTypes>
+</CustomObjectTranslation>

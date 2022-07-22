@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NivelAprendizagem__c</fullName>
+    <externalId>false</externalId>
+    <label>Nível de aprendizagem</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>TipoAvaliacao__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Não executa</fullName>
+                <default>false</default>
+                <label>Não executa</label>
+            </value>
+            <value>
+                <fullName>Executa com dificuldade</fullName>
+                <default>false</default>
+                <label>Executa com dificuldade</label>
+            </value>
+            <value>
+                <fullName>Executa</fullName>
+                <default>false</default>
+                <label>Executa</label>
+            </value>
+            <value>
+                <fullName>Executa com fluência</fullName>
+                <default>false</default>
+                <label>Executa com fluência</label>
+            </value>
+            <value>
+                <fullName>Nunca</fullName>
+                <default>false</default>
+                <label>Nunca</label>
+            </value>
+            <value>
+                <fullName>Ás vezes</fullName>
+                <default>false</default>
+                <label>Ás vezes</label>
+            </value>
+            <value>
+                <fullName>Frequentemente</fullName>
+                <default>false</default>
+                <label>Frequentemente</label>
+            </value>
+            <value>
+                <fullName>Sempre</fullName>
+                <default>false</default>
+                <label>Sempre</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Técnica</controllingFieldValue>
+            <valueName>Não executa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Técnica</controllingFieldValue>
+            <valueName>Executa com dificuldade</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Técnica</controllingFieldValue>
+            <valueName>Executa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Técnica</controllingFieldValue>
+            <valueName>Executa com fluência</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Socioemocional</controllingFieldValue>
+            <valueName>Nunca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Socioemocional</controllingFieldValue>
+            <valueName>Ás vezes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Socioemocional</controllingFieldValue>
+            <valueName>Frequentemente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Socioemocional</controllingFieldValue>
+            <valueName>Sempre</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

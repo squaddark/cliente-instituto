@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Conteudo__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Conteúdo</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>5 ABERTOS</fullName>
+                <default>true</default>
+                <label>5 ABERTOS</label>
+            </value>
+            <value>
+                <fullName>AJUDA 1º LINHA</fullName>
+                <default>false</default>
+                <label>AJUDA 1º LINHA</label>
+            </value>
+            <value>
+                <fullName>AJUDA 2º LINHA</fullName>
+                <default>false</default>
+                <label>AJUDA 2º LINHA</label>
+            </value>
+            <value>
+                <fullName>AJUDAR O DEFENSOR BLOQUEADO</fullName>
+                <default>false</default>
+                <label>AJUDAR O DEFENSOR BLOQUEADO</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR</fullName>
+                <default>false</default>
+                <label>ARREMESSAR</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR PARADO OU EM MOVIMENTO</fullName>
+                <default>false</default>
+                <label>ARREMESSAR PARADO OU EM MOVIMENTO</label>
+            </value>
+            <value>
+                <fullName>AUTOCONFIANÇA</fullName>
+                <default>false</default>
+                <label>AUTOCONFIANÇA</label>
+            </value>
+            <value>
+                <fullName>AUTOCONTROLE</fullName>
+                <default>false</default>
+                <label>AUTOCONTROLE</label>
+            </value>
+            <value>
+                <fullName>AUTONOMIA</fullName>
+                <default>false</default>
+                <label>AUTONOMIA</label>
+            </value>
+            <value>
+                <fullName>BLOQUEAR ARREMESSO</fullName>
+                <default>false</default>
+                <label>BLOQUEAR ARREMESSO</label>
+            </value>
+            <value>
+                <fullName>BLOQUEAR DEFENSOR FORA DA BOLA</fullName>
+                <default>false</default>
+                <label>BLOQUEAR DEFENSOR FORA DA BOLA</label>
+            </value>
+            <value>
+                <fullName>BLOQUEAR DEFENSOR NA BOLA</fullName>
+                <default>false</default>
+                <label>BLOQUEAR DEFENSOR NA BOLA</label>
+            </value>
+            <value>
+                <fullName>CAPACIDADES FÍSICAS</fullName>
+                <default>false</default>
+                <label>CAPACIDADES FÍSICAS</label>
+            </value>
+            <value>
+                <fullName>COMUNICAÇÃO</fullName>
+                <default>false</default>
+                <label>COMUNICAÇÃO</label>
+            </value>
+            <value>
+                <fullName>CONSERVAR A POSSE DE BOLA</fullName>
+                <default>false</default>
+                <label>CONSERVAR A POSSE DE BOLA</label>
+            </value>
+            <value>
+                <fullName>CONTRA ATACAR EM &quot;TRAILER&quot;</fullName>
+                <default>false</default>
+                <label>CONTRA ATACAR EM &quot;TRAILER&quot;</label>
+            </value>
+            <value>
+                <fullName>CONTRA-ATACAR EM CORREDORES</fullName>
+                <default>false</default>
+                <label>CONTRA-ATACAR EM CORREDORES</label>
+            </value>
+            <value>
+                <fullName>CONTRA DEFESA INDIVIDUAL</fullName>
+                <default>false</default>
+                <label>CONTRA DEFESA INDIVIDUAL</label>
+            </value>
+            <value>
+                <fullName>CONTRA DEFESA ZONA</fullName>
+                <default>false</default>
+                <label>CONTRA DEFESA ZONA</label>
+            </value>
+            <value>
+                <fullName>COOPERAÇÃO</fullName>
+                <default>false</default>
+                <label>COOPERAÇÃO</label>
+            </value>
+            <value>
+                <fullName>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</fullName>
+                <default>false</default>
+                <label>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</label>
+            </value>
+            <value>
+                <fullName>CORTAR PARA RECEBER</fullName>
+                <default>false</default>
+                <label>CORTAR PARA RECEBER</label>
+            </value>
+            <value>
+                <fullName>CRIAR LINHA DE PASSE</fullName>
+                <default>false</default>
+                <label>CRIAR LINHA DE PASSE</label>
+            </value>
+            <value>
+                <fullName>CRUZAR</fullName>
+                <default>false</default>
+                <label>CRUZAR</label>
+            </value>
+            <value>
+                <fullName>DEFESA DE CORTES E TRIANGULO DEFENSIVO</fullName>
+                <default>false</default>
+                <label>DEFESA DE CORTES E TRIANGULO DEFENSIVO</label>
+            </value>
+            <value>
+                <fullName>DESEQUILIBRAR A DEFESA</fullName>
+                <default>false</default>
+                <label>DESEQUILIBRAR A DEFESA</label>
+            </value>
+            <value>
+                <fullName>DESLOCAMENTO POSICIONAMENTO E COMUNICAÇÃO</fullName>
+                <default>false</default>
+                <label>DESLOCAMENTO POSICIONAMENTO E COMUNICAÇÃO</label>
+            </value>
+            <value>
+                <fullName>DESLOCAMENTO POSICIONAMENTO LADO FORTE E LADO FRACO</fullName>
+                <default>false</default>
+                <label>DESLOCAMENTO POSICIONAMENTO LADO FORTE E LADO FRACO</label>
+            </value>
+            <value>
+                <fullName>DESLOCAR PARA RECEBER EM FUNÇÃO DO DRIBLE</fullName>
+                <default>false</default>
+                <label>DESLOCAR PARA RECEBER EM FUNÇÃO DO DRIBLE</label>
+            </value>
+            <value>
+                <fullName>DESLOCAR-SE INDUZINDO DIREÇÃO</fullName>
+                <default>false</default>
+                <label>DESLOCAR-SE INDUZINDO DIREÇÃO</label>
+            </value>
+            <value>
+                <fullName>DESMARCAR-SE</fullName>
+                <default>false</default>
+                <label>DESMARCAR-SE</label>
+            </value>
+            <value>
+                <fullName>DRIBLAR</fullName>
+                <default>false</default>
+                <label>DRIBLAR</label>
+            </value>
+            <value>
+                <fullName>DRIBLAR COM PROTEÇÃO</fullName>
+                <default>false</default>
+                <label>DRIBLAR COM PROTEÇÃO</label>
+            </value>
+            <value>
+                <fullName>DRIBLAR EM MOVIMENTO</fullName>
+                <default>false</default>
+                <label>DRIBLAR EM MOVIMENTO</label>
+            </value>
+            <value>
+                <fullName>DRIBLAR EM MOVIMENTO COM MUDANÇA DE DIREÇÃO</fullName>
+                <default>false</default>
+                <label>DRIBLAR EM MOVIMENTO COM MUDANÇA DE DIREÇÃO</label>
+            </value>
+            <value>
+                <fullName>DRIBLAR PARADO</fullName>
+                <default>false</default>
+                <label>DRIBLAR PARADO</label>
+            </value>
+            <value>
+                <fullName>DUPLA AMEAÇA</fullName>
+                <default>false</default>
+                <label>DUPLA AMEAÇA</label>
+            </value>
+            <value>
+                <fullName>EMPATIA</fullName>
+                <default>false</default>
+                <label>EMPATIA</label>
+            </value>
+            <value>
+                <fullName>ENQUADRAR-SE EM RELAÇÃO À CESTA</fullName>
+                <default>false</default>
+                <label>ENQUADRAR-SE EM RELAÇÃO À CESTA</label>
+            </value>
+            <value>
+                <fullName>FAZER ARMADILHA (1X2)</fullName>
+                <default>false</default>
+                <label>FAZER ARMADILHA (1X2)</label>
+            </value>
+            <value>
+                <fullName>FINALIZAR</fullName>
+                <default>false</default>
+                <label>FINALIZAR</label>
+            </value>
+            <value>
+                <fullName>FINTAR</fullName>
+                <default>false</default>
+                <label>FINTAR</label>
+            </value>
+            <value>
+                <fullName>FINTAR COM BOLA</fullName>
+                <default>false</default>
+                <label>FINTAR COM BOLA</label>
+            </value>
+            <value>
+                <fullName>FINTAR SEM BOLA</fullName>
+                <default>false</default>
+                <label>FINTAR SEM BOLA</label>
+            </value>
+            <value>
+                <fullName>HONESTIDADE</fullName>
+                <default>false</default>
+                <label>HONESTIDADE</label>
+            </value>
+            <value>
+                <fullName>IMPEDIR FINALIZAÇÃO</fullName>
+                <default>false</default>
+                <label>IMPEDIR FINALIZAÇÃO</label>
+            </value>
+            <value>
+                <fullName>IMPEDIR PROGESSÃO À CESTA</fullName>
+                <default>false</default>
+                <label>IMPEDIR PROGESSÃO À CESTA</label>
+            </value>
+            <value>
+                <fullName>INDIVIDUAL</fullName>
+                <default>false</default>
+                <label>INDIVIDUAL</label>
+            </value>
+            <value>
+                <fullName>INTELIGÊNCIA E CRIATIVIDADE</fullName>
+                <default>false</default>
+                <label>INTELIGÊNCIA E CRIATIVIDADE</label>
+            </value>
+            <value>
+                <fullName>INTERCEPTAR O PASSE</fullName>
+                <default>false</default>
+                <label>INTERCEPTAR O PASSE</label>
+            </value>
+            <value>
+                <fullName>MANTER EQUILÍBRIO DEFENSIVO</fullName>
+                <default>false</default>
+                <label>MANTER EQUILÍBRIO DEFENSIVO</label>
+            </value>
+            <value>
+                <fullName>MARCAR LINHA DE PASSE</fullName>
+                <default>false</default>
+                <label>MARCAR LINHA DE PASSE</label>
+            </value>
+            <value>
+                <fullName>OCUPAR ESPAÇOS LIVRES</fullName>
+                <default>false</default>
+                <label>OCUPAR ESPAÇOS LIVRES</label>
+            </value>
+            <value>
+                <fullName>PARAR EM 1 TEMPO</fullName>
+                <default>false</default>
+                <label>PARAR EM 1 TEMPO</label>
+            </value>
+            <value>
+                <fullName>PARAR EM 2 TEMPOS</fullName>
+                <default>false</default>
+                <label>PARAR EM 2 TEMPOS</label>
+            </value>
+            <value>
+                <fullName>PASSAR</fullName>
+                <default>false</default>
+                <label>PASSAR</label>
+            </value>
+            <value>
+                <fullName>PASSAR - PEITO</fullName>
+                <default>false</default>
+                <label>PASSAR - PEITO</label>
+            </value>
+            <value>
+                <fullName>PÉ DE PIVÔ</fullName>
+                <default>false</default>
+                <label>PÉ DE PIVÔ</label>
+            </value>
+            <value>
+                <fullName>PERSISTÊNCIA</fullName>
+                <default>false</default>
+                <label>PERSISTÊNCIA</label>
+            </value>
+            <value>
+                <fullName>POSICIONAR-SE DEFENSIVAMENTE</fullName>
+                <default>false</default>
+                <label>POSICIONAR-SE DEFENSIVAMENTE</label>
+            </value>
+            <value>
+                <fullName>POSICIONAR-SE NO TRIÂNGULO DEFENSIVO e Defender o Corte</fullName>
+                <default>false</default>
+                <label>POSICIONAR-SE NO TRIÂNGULO DEFENSIVO e Defender o Corte</label>
+            </value>
+            <value>
+                <fullName>PROGREDIR À CESTA</fullName>
+                <default>false</default>
+                <label>PROGREDIR À CESTA</label>
+            </value>
+            <value>
+                <fullName>PROTEGER A CESTA</fullName>
+                <default>false</default>
+                <label>PROTEGER A CESTA</label>
+            </value>
+            <value>
+                <fullName>REBOTEAR</fullName>
+                <default>false</default>
+                <label>REBOTEAR</label>
+            </value>
+            <value>
+                <fullName>RECEBER</fullName>
+                <default>false</default>
+                <label>RECEBER</label>
+            </value>
+            <value>
+                <fullName>RECUPERAR POSSE DE BOLA</fullName>
+                <default>false</default>
+                <label>RECUPERAR POSSE DE BOLA</label>
+            </value>
+            <value>
+                <fullName>REDUZIR OPÇÕES DE ATAQUE</fullName>
+                <default>false</default>
+                <label>REDUZIR OPÇÕES DE ATAQUE</label>
+            </value>
+            <value>
+                <fullName>RESILIÊNCIA</fullName>
+                <default>false</default>
+                <label>RESILIÊNCIA</label>
+            </value>
+            <value>
+                <fullName>RESPEITO</fullName>
+                <default>false</default>
+                <label>RESPEITO</label>
+            </value>
+            <value>
+                <fullName>RESPONSABILIDADE</fullName>
+                <default>false</default>
+                <label>RESPONSABILIDADE</label>
+            </value>
+            <value>
+                <fullName>ROTAÇÃO DEFENSIVA</fullName>
+                <default>false</default>
+                <label>ROTAÇÃO DEFENSIVA</label>
+            </value>
+            <value>
+                <fullName>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO BLOQUEIO DIRETO E MÃO A MÃO</fullName>
+                <default>false</default>
+                <label>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO BLOQUEIO DIRETO E MÃO A MÃO</label>
+            </value>
+            <value>
+                <fullName>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR DO PERIMETRO</fullName>
+                <default>false</default>
+                <label>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR DO PERIMETRO</label>
+            </value>
+            <value>
+                <fullName>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR INTERNO</fullName>
+                <default>false</default>
+                <label>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR INTERNO</label>
+            </value>
+            <value>
+                <fullName>ROUBAR A BOLA</fullName>
+                <default>false</default>
+                <label>ROUBAR A BOLA</label>
+            </value>
+            <value>
+                <fullName>SAÍDAS</fullName>
+                <default>false</default>
+                <label>SAÍDAS</label>
+            </value>
+            <value>
+                <fullName>SAIR DO BLOQUEIO</fullName>
+                <default>false</default>
+                <label>SAIR DO BLOQUEIO</label>
+            </value>
+            <value>
+                <fullName>TOMADA DE DECISÃO</fullName>
+                <default>false</default>
+                <label>TOMADA DE DECISÃO</label>
+            </value>
+            <value>
+                <fullName>TRÍPLICE AMEAÇA</fullName>
+                <default>false</default>
+                <label>TRÍPLICE AMEAÇA</label>
+            </value>
+            <value>
+                <fullName>TROCAR MARCAÇÃO</fullName>
+                <default>false</default>
+                <label>TROCAR MARCAÇÃO</label>
+            </value>
+            <value>
+                <fullName>UTILIZAR CORTE E SAIDAS DE BLOQUEIOS INDIRETOS. LEITURA DO DEFENSOR</fullName>
+                <default>false</default>
+                <label>UTILIZAR CORTE E SAIDAS DE BLOQUEIOS INDIRETOS. LEITURA DO DEFENSOR</label>
+            </value>
+            <value>
+                <fullName>ZONA</fullName>
+                <default>false</default>
+                <label>ZONA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

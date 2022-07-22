@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>Layout de página aluno</layout>
+        <sections>
+            <label></label>
+            <section>Contato de emergência</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados complementares do aluno</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados de saúde</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados dos responsáveis</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados esportivos e de medidas</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados familiares</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados pessoais</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações do Instituto superação</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações do sistema</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações endereço</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações escolares</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Responsável 2</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Layout de página treinador/tutor</layout>
+        <sections>
+            <label></label>
+            <section>Campos</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Contato de emergência</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados adicionais</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados de admissão</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Dados pessoais</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Endereço</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Informações do sistema</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Links personalizados</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label></label>
+        <name>AvaliacaoTutor</name>
+    </quickActions>
+    <quickActions>
+        <label></label>
+        <name>VincularEscola</name>
+    </quickActions>
+</CustomObjectTranslation>

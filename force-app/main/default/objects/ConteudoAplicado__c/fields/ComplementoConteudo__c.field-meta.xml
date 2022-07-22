@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComplementoConteudo__c</fullName>
+    <externalId>false</externalId>
+    <label>Complemento do Conteúdo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Conteudo__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACOPLAMENTO SINCRONIA DE MOVIMENTOS</fullName>
+                <default>false</default>
+                <label>ACOPLAMENTO SINCRONIA DE MOVIMENTOS</label>
+            </value>
+            <value>
+                <fullName>ADAPTABILIDADE (PROBLEMAS MOTORES)</fullName>
+                <default>false</default>
+                <label>ADAPTABILIDADE (PROBLEMAS MOTORES)</label>
+            </value>
+            <value>
+                <fullName>ANTECIPAÇÃO</fullName>
+                <default>false</default>
+                <label>ANTECIPAÇÃO</label>
+            </value>
+            <value>
+                <fullName>ANTES DO DRIBLE</fullName>
+                <default>false</default>
+                <label>ANTES DO DRIBLE</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE</fullName>
+                <default>false</default>
+                <label>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - FINTAS DE PASSE</fullName>
+                <default>false</default>
+                <label>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - FINTAS DE PASSE</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - OMBRO</fullName>
+                <default>false</default>
+                <label>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - OMBRO</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PEITO</fullName>
+                <default>false</default>
+                <label>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PEITO</label>
+            </value>
+            <value>
+                <fullName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PICADO</fullName>
+                <default>false</default>
+                <label>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PICADO</label>
+            </value>
+            <value>
+                <fullName>ARREMESSO SALTANDO</fullName>
+                <default>false</default>
+                <label>ARREMESSO SALTANDO</label>
+            </value>
+            <value>
+                <fullName>BACKDOOR</fullName>
+                <default>false</default>
+                <label>BACKDOOR</label>
+            </value>
+            <value>
+                <fullName>BANDEJA</fullName>
+                <default>false</default>
+                <label>BANDEJA</label>
+            </value>
+            <value>
+                <fullName>COSTAS</fullName>
+                <default>false</default>
+                <label>COSTAS</label>
+            </value>
+            <value>
+                <fullName>DESLOCAR PARA RECEBER EM FUNÇÃO DO PASSE</fullName>
+                <default>false</default>
+                <label>DESLOCAR PARA RECEBER EM FUNÇÃO DO PASSE</label>
+            </value>
+            <value>
+                <fullName>DIFERENCIAÇÃO (PRECISÃO E EFICIÊNCIA)</fullName>
+                <default>false</default>
+                <label>DIFERENCIAÇÃO (PRECISÃO E EFICIÊNCIA)</label>
+            </value>
+            <value>
+                <fullName>DUPLOS</fullName>
+                <default>false</default>
+                <label>DUPLOS</label>
+            </value>
+            <value>
+                <fullName>DURANTE O DRIBLE</fullName>
+                <default>false</default>
+                <label>DURANTE O DRIBLE</label>
+            </value>
+            <value>
+                <fullName>EM L</fullName>
+                <default>false</default>
+                <label>EM L</label>
+            </value>
+            <value>
+                <fullName>EM MOVIMENTO</fullName>
+                <default>false</default>
+                <label>EM MOVIMENTO</label>
+            </value>
+            <value>
+                <fullName>EM V</fullName>
+                <default>false</default>
+                <label>EM V</label>
+            </value>
+            <value>
+                <fullName>EQUILIBRIO</fullName>
+                <default>false</default>
+                <label>EQUILIBRIO</label>
+            </value>
+            <value>
+                <fullName>FINTA DE ARREMESSO</fullName>
+                <default>false</default>
+                <label>FINTA DE ARREMESSO</label>
+            </value>
+            <value>
+                <fullName>FINTAS DE PASSE</fullName>
+                <default>false</default>
+                <label>FINTAS DE PASSE</label>
+            </value>
+            <value>
+                <fullName>FLEXIBILIDADE</fullName>
+                <default>false</default>
+                <label>FLEXIBILIDADE</label>
+            </value>
+            <value>
+                <fullName>FLUTUAR OU PRESSIONAR; JOGADOR-BOLA-CESTA</fullName>
+                <default>false</default>
+                <label>FLUTUAR OU PRESSIONAR; JOGADOR-BOLA-CESTA</label>
+            </value>
+            <value>
+                <fullName>FORÇA</fullName>
+                <default>false</default>
+                <label>FORÇA</label>
+            </value>
+            <value>
+                <fullName>GIRO</fullName>
+                <default>false</default>
+                <label>GIRO</label>
+            </value>
+            <value>
+                <fullName>LATERAL</fullName>
+                <default>false</default>
+                <label>LATERAL</label>
+            </value>
+            <value>
+                <fullName>MEMÓRIA</fullName>
+                <default>false</default>
+                <label>MEMÓRIA</label>
+            </value>
+            <value>
+                <fullName>OMBRO</fullName>
+                <default>false</default>
+                <label>OMBRO</label>
+            </value>
+            <value>
+                <fullName>ORIENTAÇÃO ESPACIAL</fullName>
+                <default>false</default>
+                <label>ORIENTAÇÃO ESPACIAL</label>
+            </value>
+            <value>
+                <fullName>PASSAR - PEITO</fullName>
+                <default>false</default>
+                <label>PASSAR - PEITO</label>
+            </value>
+            <value>
+                <fullName>PENETRAR OU FINALIZAR  ANTES DO DRIBLE/ DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO</fullName>
+                <default>false</default>
+                <label>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO ANTES DO DRIBLE</label>
+            </value>
+            <value>
+                <fullName>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO DURANTE DO DRIBLE</fullName>
+                <default>false</default>
+                <label>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO DURANTE DO DRIBLE</label>
+            </value>
+            <value>
+                <fullName>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO FINTA DE ARREMESSO</fullName>
+                <default>false</default>
+                <label>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO FINTA DE ARREMESSO</label>
+            </value>
+            <value>
+                <fullName>PERCEPÇÃO</fullName>
+                <default>false</default>
+                <label>PERCEPÇÃO</label>
+            </value>
+            <value>
+                <fullName>PICADO</fullName>
+                <default>false</default>
+                <label>PICADO</label>
+            </value>
+            <value>
+                <fullName>PICK&amp;ROLL</fullName>
+                <default>false</default>
+                <label>PICK&amp;ROLL</label>
+            </value>
+            <value>
+                <fullName>POR CIMA</fullName>
+                <default>false</default>
+                <label>POR CIMA</label>
+            </value>
+            <value>
+                <fullName>REAÇÃO</fullName>
+                <default>false</default>
+                <label>REAÇÃO</label>
+            </value>
+            <value>
+                <fullName>RESISTENCIA</fullName>
+                <default>false</default>
+                <label>RESISTENCIA</label>
+            </value>
+            <value>
+                <fullName>RITMO</fullName>
+                <default>false</default>
+                <label>RITMO</label>
+            </value>
+            <value>
+                <fullName>SAIR DOS BLOQUEIOS COM VANTAGEM PARA RECEBER</fullName>
+                <default>false</default>
+                <label>SAIR DOS BLOQUEIOS COM VANTAGEM PARA RECEBER</label>
+            </value>
+            <value>
+                <fullName>TOMADA DE DECISÃO</fullName>
+                <default>false</default>
+                <label>TOMADA DE DECISÃO</label>
+            </value>
+            <value>
+                <fullName>UMA MÃO</fullName>
+                <default>false</default>
+                <label>UMA MÃO</label>
+            </value>
+            <value>
+                <fullName>VELOCIDADE</fullName>
+                <default>false</default>
+                <label>VELOCIDADE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>ARREMESSAR PARADO OU EM MOVIMENTO</controllingFieldValue>
+            <controllingFieldValue>FINALIZAR</controllingFieldValue>
+            <valueName>ARREMESSO SALTANDO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARREMESSAR PARADO OU EM MOVIMENTO</controllingFieldValue>
+            <controllingFieldValue>FINALIZAR</controllingFieldValue>
+            <valueName>BANDEJA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ARREMESSAR PARADO OU EM MOVIMENTO</controllingFieldValue>
+            <controllingFieldValue>FINALIZAR</controllingFieldValue>
+            <valueName>UMA MÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINTAR COM BOLA</controllingFieldValue>
+            <valueName>ANTES DO DRIBLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINTAR COM BOLA</controllingFieldValue>
+            <valueName>DURANTE O DRIBLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINTAR COM BOLA</controllingFieldValue>
+            <valueName>FINTA DE ARREMESSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>POSICIONAR-SE DEFENSIVAMENTE</controllingFieldValue>
+            <valueName>FLUTUAR OU PRESSIONAR; JOGADOR-BOLA-CESTA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DUPLA AMEAÇA</controllingFieldValue>
+            <valueName>PENETRAR OU FINALIZAR  ANTES DO DRIBLE/ DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DUPLA AMEAÇA</controllingFieldValue>
+            <valueName>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO DURANTE DO DRIBLE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DUPLA AMEAÇA</controllingFieldValue>
+            <valueName>PENETRAR OU FINALIZAR / DESMARCAR-SE / ENCONTRAR ESPAÇOS PARA PENETRAÇÃO FINTA DE ARREMESSO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FINTAR</controllingFieldValue>
+            <valueName>FINTAS DE PASSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PASSAR</controllingFieldValue>
+            <valueName>OMBRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PASSAR</controllingFieldValue>
+            <valueName>PICADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PASSAR</controllingFieldValue>
+            <valueName>POR CIMA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRÍPLICE AMEAÇA</controllingFieldValue>
+            <valueName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRÍPLICE AMEAÇA</controllingFieldValue>
+            <valueName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - FINTAS DE PASSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRÍPLICE AMEAÇA</controllingFieldValue>
+            <valueName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - OMBRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRÍPLICE AMEAÇA</controllingFieldValue>
+            <valueName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PEITO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRÍPLICE AMEAÇA</controllingFieldValue>
+            <valueName>ARREMESSAR, PENETRAR OU PASSAR / PASSAR E CORTAR (GIVE AND GO) / JOGO EM LARGURA E PROFUNDIDADE - PICADO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESMARCAR-SE</controllingFieldValue>
+            <controllingFieldValue>CRIAR LINHA DE PASSE</controllingFieldValue>
+            <controllingFieldValue>FINTAR SEM BOLA</controllingFieldValue>
+            <valueName>BACKDOOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESMARCAR-SE</controllingFieldValue>
+            <controllingFieldValue>CRIAR LINHA DE PASSE</controllingFieldValue>
+            <controllingFieldValue>FINTAR SEM BOLA</controllingFieldValue>
+            <valueName>EM L</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESMARCAR-SE</controllingFieldValue>
+            <controllingFieldValue>CRIAR LINHA DE PASSE</controllingFieldValue>
+            <controllingFieldValue>FINTAR SEM BOLA</controllingFieldValue>
+            <valueName>EM V</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESMARCAR-SE</controllingFieldValue>
+            <controllingFieldValue>CRIAR LINHA DE PASSE</controllingFieldValue>
+            <controllingFieldValue>FINTAR SEM BOLA</controllingFieldValue>
+            <valueName>GIRO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BLOQUEAR DEFENSOR NA BOLA</controllingFieldValue>
+            <controllingFieldValue>DESEQUILIBRAR A DEFESA</controllingFieldValue>
+            <controllingFieldValue>BLOQUEAR DEFENSOR FORA DA BOLA</controllingFieldValue>
+            <valueName>COSTAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BLOQUEAR DEFENSOR NA BOLA</controllingFieldValue>
+            <controllingFieldValue>DESEQUILIBRAR A DEFESA</controllingFieldValue>
+            <controllingFieldValue>BLOQUEAR DEFENSOR FORA DA BOLA</controllingFieldValue>
+            <valueName>EM MOVIMENTO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BLOQUEAR DEFENSOR NA BOLA</controllingFieldValue>
+            <controllingFieldValue>DESEQUILIBRAR A DEFESA</controllingFieldValue>
+            <controllingFieldValue>BLOQUEAR DEFENSOR FORA DA BOLA</controllingFieldValue>
+            <valueName>LATERAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>BLOQUEAR DEFENSOR NA BOLA</controllingFieldValue>
+            <controllingFieldValue>DESEQUILIBRAR A DEFESA</controllingFieldValue>
+            <valueName>PICK&amp;ROLL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>DESEQUILIBRAR A DEFESA</controllingFieldValue>
+            <controllingFieldValue>BLOQUEAR DEFENSOR FORA DA BOLA</controllingFieldValue>
+            <valueName>DUPLOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR DO PERIMETRO</controllingFieldValue>
+            <controllingFieldValue>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO JOGADOR INTERNO</controllingFieldValue>
+            <controllingFieldValue>ROTAÇÃO OFENSIVA APÓS A AÇÃO DO BLOQUEIO DIRETO E MÃO A MÃO</controllingFieldValue>
+            <controllingFieldValue>DESLOCAR PARA RECEBER EM FUNÇÃO DO DRIBLE</controllingFieldValue>
+            <valueName>DESLOCAR PARA RECEBER EM FUNÇÃO DO PASSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>UTILIZAR CORTE E SAIDAS DE BLOQUEIOS INDIRETOS. LEITURA DO DEFENSOR</controllingFieldValue>
+            <controllingFieldValue>CORTAR PARA RECEBER</controllingFieldValue>
+            <valueName>SAIR DOS BLOQUEIOS COM VANTAGEM PARA RECEBER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTELIGÊNCIA E CRIATIVIDADE</controllingFieldValue>
+            <valueName>ANTECIPAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTELIGÊNCIA E CRIATIVIDADE</controllingFieldValue>
+            <valueName>MEMÓRIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTELIGÊNCIA E CRIATIVIDADE</controllingFieldValue>
+            <valueName>PERCEPÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>INTELIGÊNCIA E CRIATIVIDADE</controllingFieldValue>
+            <valueName>TOMADA DE DECISÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>ACOPLAMENTO SINCRONIA DE MOVIMENTOS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>ADAPTABILIDADE (PROBLEMAS MOTORES)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>DIFERENCIAÇÃO (PRECISÃO E EFICIÊNCIA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>EQUILIBRIO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>ORIENTAÇÃO ESPACIAL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>REAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>COORDENAÇÃO (CONTROLE DE CORPO E DE BOLA)</controllingFieldValue>
+            <valueName>RITMO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPACIDADES FÍSICAS</controllingFieldValue>
+            <valueName>FLEXIBILIDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPACIDADES FÍSICAS</controllingFieldValue>
+            <valueName>FORÇA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPACIDADES FÍSICAS</controllingFieldValue>
+            <valueName>RESISTENCIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CAPACIDADES FÍSICAS</controllingFieldValue>
+            <valueName>VELOCIDADE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,52 @@
+<template>
+    <div class="scroll">
+        <template for:each={lstParecer} for:item="parecer">
+            <div style="margin-top: 1.2rem" key={parecer.numeroPlc} id={parecer.numeroPlc}>
+                <div class="slds-box slds-p-around_small slds-var-m-top_x-small slds-var-m-bottom_medium slds-m-horizontal_none">
+                    <lightning-card>
+                        <div class="section-group slds-p-bottom_large">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <lightning-icon icon-name="standard:email" size="medium"></lightning-icon>
+                                <span class="slds-text-heading_small slds-var-p-left_medium"><b>{ parecer.tituloParecer }</b></span>
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap space">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <b>Nome do usuário autor parecer:</b> <br> { parecer.nomeUsuarioAutorParecer }
+                            </div>
+                        </div>
+                        
+                        <div class="slds-grid slds-wrap space">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <b>Data de alteração parecer:</b> <br> { parecer.dataAlteracaoParecer }
+                            </div>
+                        </div>
+                       
+                        <div class="slds-grid slds-wrap space">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <b>Data de envio parecer:</b> <br> { parecer.dataEnvioParecer }
+                            </div>
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                    <b>Data de finalização parecer:</b> <br> { parecer.dataFinalizacaoParecer }
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap space">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <b>Nome do usuário consultado:</b> <br> { parecer.nomeUsuarioConsultado }
+                            </div>
+                        </div>
+
+                        <div class="slds-grid slds-wrap space">
+                            <div class="slds-size_1-of-2 slds-p-horizontal_medium">
+                                <b>Descrição parecer:</b> <br> 
+                                <lightning-textarea value={parecer.descricaoParecer}>{ parecer.descricaoParecer } </lightning-textarea>
+                            </div>
+                        </div>
+                    </lightning-card>
+                </div>
+            </div>
+        </template>
+    </div>
+</template>

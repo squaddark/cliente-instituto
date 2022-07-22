@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tipo__c</fullName>
+    <externalId>false</externalId>
+    <label>Tipo</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Estrutura__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>TÁTICO</fullName>
+                <default>false</default>
+                <label>TÁTICO</label>
+            </value>
+            <value>
+                <fullName>TÉCNICO</fullName>
+                <default>false</default>
+                <label>TÉCNICO</label>
+            </value>
+            <value>
+                <fullName>AMOR</fullName>
+                <default>false</default>
+                <label>AMOR</label>
+            </value>
+            <value>
+                <fullName>HUMILDADE</fullName>
+                <default>false</default>
+                <label>HUMILDADE</label>
+            </value>
+            <value>
+                <fullName>DISCIPLINA</fullName>
+                <default>false</default>
+                <label>DISCIPLINA</label>
+            </value>
+            <value>
+                <fullName>CORAGEM</fullName>
+                <default>false</default>
+                <label>CORAGEM</label>
+            </value>
+            <value>
+                <fullName>TRABALHO EM EQUIPE</fullName>
+                <default>false</default>
+                <label>TRABALHO EM EQUIPE</label>
+            </value>
+            <value>
+                <fullName>SUPERAÇÃO</fullName>
+                <default>false</default>
+                <label>SUPERAÇÃO</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>JOGO FORMAL (5X5)  - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X0 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X1 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X1 NA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>2x2 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>2x2 SEM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>2x2 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>3X3 SEM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>3X3 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>4X4 SEM BOLA  ATAQUE</controllingFieldValue>
+            <controllingFieldValue>4X4 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <valueName>TÁTICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JOGO FORMAL (5X5)  - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X0 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X1 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>1X1 NA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>2x2 COM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>2x2 SEM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>2x2 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>3X3 SEM BOLA - ATAQUE</controllingFieldValue>
+            <controllingFieldValue>3X3 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <controllingFieldValue>4X4 SEM BOLA  ATAQUE</controllingFieldValue>
+            <controllingFieldValue>4X4 FORA DA BOLA - DEFESA</controllingFieldValue>
+            <valueName>TÉCNICO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>AMOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>HUMILDADE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>DISCIPLINA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>CORAGEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>TRABALHO EM EQUIPE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>N/A</controllingFieldValue>
+            <valueName>SUPERAÇÃO</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>NA</controllingFieldValue>
+            <valueName>N/A</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parametros__c</fullName>
+    <externalId>false</externalId>
+    <label>Parâmetros</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Indicador__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Não</fullName>
+                <default>false</default>
+                <label>Não</label>
+            </value>
+            <value>
+                <fullName>Sim</fullName>
+                <default>false</default>
+                <label>Sim</label>
+            </value>
+            <value>
+                <fullName>0 a 15</fullName>
+                <default>false</default>
+                <label>0 a 15</label>
+            </value>
+            <value>
+                <fullName>16 a 25</fullName>
+                <default>false</default>
+                <label>16 a 25</label>
+            </value>
+            <value>
+                <fullName>26 a 39</fullName>
+                <default>false</default>
+                <label>26 a 39</label>
+            </value>
+            <value>
+                <fullName>40</fullName>
+                <default>false</default>
+                <label>40</label>
+            </value>
+            <value>
+                <fullName>até 40%</fullName>
+                <default>false</default>
+                <label>até 40%</label>
+            </value>
+            <value>
+                <fullName>41 a 70%</fullName>
+                <default>false</default>
+                <label>41 a 70%</label>
+            </value>
+            <value>
+                <fullName>71 a 99%</fullName>
+                <default>false</default>
+                <label>71 a 99%</label>
+            </value>
+            <value>
+                <fullName>100%</fullName>
+                <default>false</default>
+                <label>100%</label>
+            </value>
+            <value>
+                <fullName>Não entregou nenhuma</fullName>
+                <default>false</default>
+                <label>Não entregou nenhuma</label>
+            </value>
+            <value>
+                <fullName>Entregou todas em atraso</fullName>
+                <default>false</default>
+                <label>Entregou todas em atraso</label>
+            </value>
+            <value>
+                <fullName>Entregou todas no prazo</fullName>
+                <default>false</default>
+                <label>Entregou todas no prazo</label>
+            </value>
+            <value>
+                <fullName>Não executou</fullName>
+                <default>false</default>
+                <label>Não executou</label>
+            </value>
+            <value>
+                <fullName>Executou em atraso</fullName>
+                <default>false</default>
+                <label>Executou em atraso</label>
+            </value>
+            <value>
+                <fullName>Executou no prazo</fullName>
+                <default>false</default>
+                <label>Executou no prazo</label>
+            </value>
+            <value>
+                <fullName>Nunca</fullName>
+                <default>false</default>
+                <label>Nunca</label>
+            </value>
+            <value>
+                <fullName>Às vezes</fullName>
+                <default>false</default>
+                <label>Às vezes</label>
+            </value>
+            <value>
+                <fullName>Frequentemente</fullName>
+                <default>false</default>
+                <label>Frequentemente</label>
+            </value>
+            <value>
+                <fullName>Sempre</fullName>
+                <default>false</default>
+                <label>Sempre</label>
+            </value>
+            <value>
+                <fullName>Entregou parcialmente</fullName>
+                <default>false</default>
+                <label>Entregou parcialmente</label>
+            </value>
+            <value>
+                <fullName>Não preenchido</fullName>
+                <default>false</default>
+                <label>Não preenchido</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Empatia</controllingFieldValue>
+            <controllingFieldValue>Honestidade</controllingFieldValue>
+            <controllingFieldValue>Respeito</controllingFieldValue>
+            <controllingFieldValue>Autonomia</controllingFieldValue>
+            <controllingFieldValue>Responsabilidade</controllingFieldValue>
+            <controllingFieldValue>Autocontrole</controllingFieldValue>
+            <controllingFieldValue>Tomada de Decisão</controllingFieldValue>
+            <controllingFieldValue>Cooperação</controllingFieldValue>
+            <controllingFieldValue>Comunicação</controllingFieldValue>
+            <controllingFieldValue>Persistência</controllingFieldValue>
+            <controllingFieldValue>Resiliência</controllingFieldValue>
+            <controllingFieldValue>Preparação espaço</controllingFieldValue>
+            <controllingFieldValue>Planejamento prévio</controllingFieldValue>
+            <controllingFieldValue>Aprendizagem socioemocional</controllingFieldValue>
+            <controllingFieldValue>Estratégias do DNA</controllingFieldValue>
+            <controllingFieldValue>Ambiente positivo</controllingFieldValue>
+            <controllingFieldValue>Autoconfiança</controllingFieldValue>
+            <valueName>Nunca</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Empatia</controllingFieldValue>
+            <controllingFieldValue>Honestidade</controllingFieldValue>
+            <controllingFieldValue>Respeito</controllingFieldValue>
+            <controllingFieldValue>Autonomia</controllingFieldValue>
+            <controllingFieldValue>Responsabilidade</controllingFieldValue>
+            <controllingFieldValue>Autocontrole</controllingFieldValue>
+            <controllingFieldValue>Tomada de Decisão</controllingFieldValue>
+            <controllingFieldValue>Cooperação</controllingFieldValue>
+            <controllingFieldValue>Comunicação</controllingFieldValue>
+            <controllingFieldValue>Persistência</controllingFieldValue>
+            <controllingFieldValue>Resiliência</controllingFieldValue>
+            <controllingFieldValue>Preparação espaço</controllingFieldValue>
+            <controllingFieldValue>Planejamento prévio</controllingFieldValue>
+            <controllingFieldValue>Aprendizagem socioemocional</controllingFieldValue>
+            <controllingFieldValue>Estratégias do DNA</controllingFieldValue>
+            <controllingFieldValue>Ambiente positivo</controllingFieldValue>
+            <controllingFieldValue>Autoconfiança</controllingFieldValue>
+            <valueName>Às vezes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Empatia</controllingFieldValue>
+            <controllingFieldValue>Honestidade</controllingFieldValue>
+            <controllingFieldValue>Respeito</controllingFieldValue>
+            <controllingFieldValue>Autonomia</controllingFieldValue>
+            <controllingFieldValue>Responsabilidade</controllingFieldValue>
+            <controllingFieldValue>Autocontrole</controllingFieldValue>
+            <controllingFieldValue>Tomada de Decisão</controllingFieldValue>
+            <controllingFieldValue>Cooperação</controllingFieldValue>
+            <controllingFieldValue>Comunicação</controllingFieldValue>
+            <controllingFieldValue>Persistência</controllingFieldValue>
+            <controllingFieldValue>Resiliência</controllingFieldValue>
+            <controllingFieldValue>Preparação espaço</controllingFieldValue>
+            <controllingFieldValue>Planejamento prévio</controllingFieldValue>
+            <controllingFieldValue>Aprendizagem socioemocional</controllingFieldValue>
+            <controllingFieldValue>Estratégias do DNA</controllingFieldValue>
+            <controllingFieldValue>Ambiente positivo</controllingFieldValue>
+            <controllingFieldValue>Autoconfiança</controllingFieldValue>
+            <valueName>Frequentemente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Empatia</controllingFieldValue>
+            <controllingFieldValue>Honestidade</controllingFieldValue>
+            <controllingFieldValue>Respeito</controllingFieldValue>
+            <controllingFieldValue>Autonomia</controllingFieldValue>
+            <controllingFieldValue>Responsabilidade</controllingFieldValue>
+            <controllingFieldValue>Autocontrole</controllingFieldValue>
+            <controllingFieldValue>Tomada de Decisão</controllingFieldValue>
+            <controllingFieldValue>Cooperação</controllingFieldValue>
+            <controllingFieldValue>Comunicação</controllingFieldValue>
+            <controllingFieldValue>Persistência</controllingFieldValue>
+            <controllingFieldValue>Resiliência</controllingFieldValue>
+            <controllingFieldValue>Preparação espaço</controllingFieldValue>
+            <controllingFieldValue>Planejamento prévio</controllingFieldValue>
+            <controllingFieldValue>Aprendizagem socioemocional</controllingFieldValue>
+            <controllingFieldValue>Estratégias do DNA</controllingFieldValue>
+            <controllingFieldValue>Ambiente positivo</controllingFieldValue>
+            <controllingFieldValue>Autoconfiança</controllingFieldValue>
+            <valueName>Sempre</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Empatia</controllingFieldValue>
+            <controllingFieldValue>Honestidade</controllingFieldValue>
+            <controllingFieldValue>Respeito</controllingFieldValue>
+            <controllingFieldValue>Autonomia</controllingFieldValue>
+            <controllingFieldValue>Responsabilidade</controllingFieldValue>
+            <controllingFieldValue>Autocontrole</controllingFieldValue>
+            <controllingFieldValue>Tomada de Decisão</controllingFieldValue>
+            <controllingFieldValue>Cooperação</controllingFieldValue>
+            <controllingFieldValue>Comunicação</controllingFieldValue>
+            <controllingFieldValue>Persistência</controllingFieldValue>
+            <controllingFieldValue>Tarefas curso</controllingFieldValue>
+            <controllingFieldValue>Resiliência</controllingFieldValue>
+            <controllingFieldValue>Presença encontro</controllingFieldValue>
+            <controllingFieldValue>Planejamento sem</controllingFieldValue>
+            <controllingFieldValue>Passaporte</controllingFieldValue>
+            <controllingFieldValue>Super Festival</controllingFieldValue>
+            <controllingFieldValue>Festival Superação</controllingFieldValue>
+            <controllingFieldValue>Preparação espaço</controllingFieldValue>
+            <controllingFieldValue>Planejamento prévio</controllingFieldValue>
+            <controllingFieldValue>Aprendizagem socioemocional</controllingFieldValue>
+            <controllingFieldValue>Estratégias do DNA</controllingFieldValue>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <controllingFieldValue>alunos/turmas</controllingFieldValue>
+            <controllingFieldValue>Cadastro alunos</controllingFieldValue>
+            <controllingFieldValue>Controle de frequência</controllingFieldValue>
+            <controllingFieldValue>Aval esportiva</controllingFieldValue>
+            <controllingFieldValue>Aval socioemocional</controllingFieldValue>
+            <controllingFieldValue>Notas</controllingFieldValue>
+            <controllingFieldValue>Aprovação</controllingFieldValue>
+            <controllingFieldValue>Reunião famílias</controllingFieldValue>
+            <controllingFieldValue>Ambiente positivo</controllingFieldValue>
+            <controllingFieldValue>Autoconfiança</controllingFieldValue>
+            <valueName>Não preenchido</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tarefas curso</controllingFieldValue>
+            <valueName>Não entregou nenhuma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tarefas curso</controllingFieldValue>
+            <valueName>Entregou todas em atraso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tarefas curso</controllingFieldValue>
+            <valueName>Entregou todas no prazo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Tarefas curso</controllingFieldValue>
+            <valueName>Entregou parcialmente</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presença encontro</controllingFieldValue>
+            <controllingFieldValue>Passaporte</controllingFieldValue>
+            <controllingFieldValue>Super Festival</controllingFieldValue>
+            <controllingFieldValue>Festival Superação</controllingFieldValue>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <controllingFieldValue>Reunião famílias</controllingFieldValue>
+            <valueName>Não</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Presença encontro</controllingFieldValue>
+            <controllingFieldValue>Passaporte</controllingFieldValue>
+            <controllingFieldValue>Super Festival</controllingFieldValue>
+            <controllingFieldValue>Festival Superação</controllingFieldValue>
+            <controllingFieldValue>Turmas</controllingFieldValue>
+            <controllingFieldValue>Reunião famílias</controllingFieldValue>
+            <valueName>Sim</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planejamento sem</controllingFieldValue>
+            <valueName>Não executou</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planejamento sem</controllingFieldValue>
+            <valueName>Executou em atraso</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Planejamento sem</controllingFieldValue>
+            <valueName>Executou no prazo</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>alunos/turmas</controllingFieldValue>
+            <valueName>0 a 15</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>alunos/turmas</controllingFieldValue>
+            <valueName>16 a 25</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>alunos/turmas</controllingFieldValue>
+            <valueName>26 a 39</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>alunos/turmas</controllingFieldValue>
+            <valueName>40</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cadastro alunos</controllingFieldValue>
+            <controllingFieldValue>Controle de frequência</controllingFieldValue>
+            <controllingFieldValue>Aval esportiva</controllingFieldValue>
+            <controllingFieldValue>Aval socioemocional</controllingFieldValue>
+            <controllingFieldValue>Notas</controllingFieldValue>
+            <controllingFieldValue>Aprovação</controllingFieldValue>
+            <valueName>até 40%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cadastro alunos</controllingFieldValue>
+            <controllingFieldValue>Controle de frequência</controllingFieldValue>
+            <controllingFieldValue>Aval esportiva</controllingFieldValue>
+            <controllingFieldValue>Aval socioemocional</controllingFieldValue>
+            <controllingFieldValue>Notas</controllingFieldValue>
+            <controllingFieldValue>Aprovação</controllingFieldValue>
+            <valueName>41 a 70%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cadastro alunos</controllingFieldValue>
+            <controllingFieldValue>Controle de frequência</controllingFieldValue>
+            <controllingFieldValue>Aval esportiva</controllingFieldValue>
+            <controllingFieldValue>Aval socioemocional</controllingFieldValue>
+            <controllingFieldValue>Notas</controllingFieldValue>
+            <controllingFieldValue>Aprovação</controllingFieldValue>
+            <valueName>71 a 99%</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Cadastro alunos</controllingFieldValue>
+            <controllingFieldValue>Controle de frequência</controllingFieldValue>
+            <controllingFieldValue>Aval esportiva</controllingFieldValue>
+            <controllingFieldValue>Aval socioemocional</controllingFieldValue>
+            <controllingFieldValue>Notas</controllingFieldValue>
+            <controllingFieldValue>Aprovação</controllingFieldValue>
+            <valueName>100%</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

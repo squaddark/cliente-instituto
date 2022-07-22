@@ -1,0 +1,125 @@
+<template>
+    <lightning-quick-action-panel header="Lista de Presença">
+    </lightning-quick-action-panel>
+
+    <div class="bg-white">
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Seleção de data"> Seleção de data </span>
+            </h3>
+
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_1-of-5 spaceBtnCombo">
+                    <lightning-combobox options={anos} label="Ano" value={selectedAno} onchange={selectAno}> </lightning-combobox>
+                </div>
+                <div class="slds-size_1-of-5">
+                    <lightning-combobox options={meses} label="Mês" value={selectedMes} onchange={selectMes}> </lightning-combobox>
+                </div>
+
+                <div if:true={isDesktop} class="slds-size_1-of-5 slds-grid slds-wrap">
+                    <lightning-combobox options={optionsMobile} label="Dia" value={selectedDia} onchange={selectDay}> </lightning-combobox>
+                </div>
+
+                <div if:true={isPhone} class="slds-size_1-of-5 slds-grid slds-wrap">
+                    <lightning-combobox options={optionsMobile} label="Dia" value={selectedDia} onchange={selectDay}> </lightning-combobox>
+                </div>
+            </div>
+
+            <template if:true={listaVisivel}>
+                <div class="slds-grid slds-wrap margin-bottom-6">
+                    <div class="slds-col slds-size_1-of-4">
+                        <lightning-input class="negrito slds-m-left_x-small" maxlength="2" type="number" label="Dia adicional" value={diaAdicionar} onchange={selectAdicionarDia}> </lightning-input>
+                    </div>
+                    <div if:true={isDesktop} class="slds-col slds-size_1-of-2" style="margin-top: 23px;">
+                        <lightning-button icon-name="utility:add" icon-position="left" label="Adicionar dia" value="Adicionar dia" variant="neutral" class="slds-m-left_x-small" onclick={adicionarDia}> </lightning-button>
+                    </div>
+    
+                    <div if:true={isPhone} class="slds-col slds-size_1-of-2" style="margin-top: 23px;">
+                        <lightning-button icon-name="utility:add" icon-position="left" label="Adicionar dia" value="Adicionar dia" variant="neutral" class="slds-m-left_x-small" onclick={adicionarDia}> </lightning-button>
+                    </div>
+                </div>
+
+                <div class="slds-grid slds-wrap margin-bottom-6">
+                    <div class="slds-size_1-of-3">
+                        <lightning-button icon-name="standard:customers" icon-position="left" label="Presença" value="Presença" variant="neutral" class="slds-m-left_x-small" onclick={marcarPresenca}> </lightning-button>
+                    </div>
+                    <div class="slds-size_1-of-3">
+                        <lightning-button icon-name="standard:customers" icon-position="left" label="Feriado" value="Feriado" variant="neutral" class="slds-m-left_x-small" onclick={marcarFeriado}> </lightning-button>
+                    </div>  
+                </div>
+
+                <div class="slds-grid slds-wrap margin-bottom-6">
+                    <div class="slds-size_1-of-3">
+                        <lightning-button icon-name="standard:customers" icon-position="left" label="Folga" value="Folga" variant="neutral" class="slds-m-left_x-small" onclick={marcarFolga}> </lightning-button>
+                    </div>
+                    <div class="slds-size_1-of-3">
+                        <lightning-button icon-name="standard:customers" icon-position="left" label="Jogo" value="Jogo" variant="neutral" class="slds-m-left_x-small" onclick={marcarJogo}> </lightning-button>
+                    </div>  
+                </div>
+            </template>
+        </div>
+
+        <div class="space"> </div>
+
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Presença"> Presença </span>
+            </h3>
+            <div class="spaceTable"> </div>
+
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer"> 
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            <div class="slds-truncate">
+                                <lightning-input onchange={allSelected} type="checkbox"></lightning-input>
+                            </div>
+                        </th>
+    
+                        <th scope="col">
+                            <div class="slds-truncate" title="Alunos">Alunos</div>
+                        </th>
+                        <template if:true={listaVisivel}>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Dia">{diaSelecionado}</div>
+                            </th>
+                        </template>
+                    </tr>
+                </thead>
+
+                <tbody> 
+                    <template for:each={alunos} for:item="aluno">
+                        <tr key={aluno.Id}>
+                            <th scope="col">
+                                <div>
+                                    <lightning-input id={aluno.Id} type="checkbox" value={aluno.Id} data-id={aluno.Id}></lightning-input>
+                                </div>
+                            </th>
+    
+                                <td>
+                                <lightning-formatted-text value={aluno.Name}></lightning-formatted-text>                               
+                            </td>
+                                        
+                            <td if:true={comboVisivel} align="center" class="slds-text-title">
+                                <lightning-combobox
+                                class="comboboxStatusMobile"
+                                name={aluno.Id}
+                                data-id={aluno.Id} 
+                                options={status}
+                                value={aluno.Presenca}
+                                onchange={selectPresenca}
+                                disabled={aluno.StatusDisabled}>
+                                </lightning-combobox>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+
+            <footer class="slds-modal__footer slds-align_absolute-center">
+                <lightning-button class="spaceBtnCombo" variant="neutral" label="Cancelar" title="Cancelar" onclick={closeQuickAction}> </lightning-button>
+                <lightning-button if:true={comboVisivel} variant="brand" label="Salvar" title="Salvar" onclick={salvarPresenca}> </lightning-button>
+            </footer>
+        </div>
+    </div>
+</template>

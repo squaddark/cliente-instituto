@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NotaSocioemocionalA1__c</fullName>
+    <description>Faz a média dos 12 indicadores, transformando-os em 6.</description>
+    <externalId>false</externalId>
+    <formula>(( Autoconfianca__c  +  Empatia__c) / 2) + ((Honestidade__c +  Respeito__c) / 2) + (( Autonomia__c +  Responsabilidade__c) /2 ) + (( Autocontrole__c +  Tomada_de_decisao__c) / 2) + (( Comunicacao__c +  Cooperacao__c) / 2 ) + (( Persistencia__c +  Resiliencia__c) / 2 )</formula>
+    <label>Nota Socioemocional</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
