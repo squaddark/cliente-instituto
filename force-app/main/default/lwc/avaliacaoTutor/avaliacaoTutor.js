@@ -402,15 +402,20 @@ export default class AvaliacaoTutor extends LightningElement {
                 .then(result => {
                     console.log('contarAvaliacaoEsportiva()');
                     //Regra da resposta para Quantidade de alunos com avaliação esportiva
-                    this.parametro5 = result;
-                    if(result<=40){
-                        this.indicador5 = 0
-                    }else if(result >= 41 && result <= 70){
-                        this.indicador5 = 1
-                    }else if(result >= 71 && result <= 99){
-                        this.indicador5 = 2
-                    }else if(result == 100){
-                        this.indicador5 = 3
+                    if (result != 200) {
+                        
+                        this.parametro5 = result+'%';
+                        if(result<=40){
+                            this.indicador5 = 0
+                        }else if(result >= 41 && result <= 70){
+                            this.indicador5 = 1
+                        }else if(result >= 71 && result <= 99){
+                            this.indicador5 = 2
+                        }else if(result == 100){
+                            this.indicador5 = 3
+                        }
+                    } else {
+                        this.parametro5 = '-'
                     }
                 })
                 .catch(error => {
@@ -423,16 +428,21 @@ export default class AvaliacaoTutor extends LightningElement {
                 .then(result => {
                     console.log('verificarCadastroCompleto()');
                     console.log('RESULT => ' + result);
-                    this.parametro3 = result;
-                    
-                    if(result < 41){
-                        this.indicador3 = 0;
-                    } else if(result > 40 && result < 71){
-                        this.indicador3 = 1;
-                    } else if(result > 70 && result < 100){
-                        this.indicador3 = 2;
-                    } else if(result == 100){
-                        this.indicador3 = 3;
+                    if (result != 200) {
+                        
+                        this.parametro3 = result+'%';
+                        
+                        if(result < 41){
+                            this.indicador3 = 0;
+                        } else if(result > 40 && result < 71){
+                            this.indicador3 = 1;
+                        } else if(result > 70 && result < 100){
+                            this.indicador3 = 2;
+                        } else if(result == 100){
+                            this.indicador3 = 3;
+                        }
+                    } else {
+                        this.parametro3 = '-'
                     }
                     console.log('Indicador 3: ' + this.indicador3);
                     console.log('Parametro 3: ' + this.parametro3);
@@ -449,15 +459,20 @@ export default class AvaliacaoTutor extends LightningElement {
                 .then(result => {
                     console.log('contarAvaliacaoSocioemocional()');
                     console.log('RESULT AVALIAÇÃO SOCIOEMOCIONAL' + result);
-                    this.parametro6 = result;
-                    if(result < 41){
-                        this.indicador6 = 0;
-                    } else if(result > 40 && result < 71){
-                        this.indicador6 = 1;
-                    } else if(result > 70 && result < 100){
-                        this.indicador6 = 2;
-                    } else if(result == 100){
-                        this.indicador6 = 3;
+                    if (result != 200) {
+                        
+                        this.parametro6 = result+'%';
+                        if(result < 41){
+                            this.indicador6 = 0;
+                        } else if(result > 40 && result < 71){
+                            this.indicador6 = 1;
+                        } else if(result > 70 && result < 100){
+                            this.indicador6 = 2;
+                        } else if(result == 100){
+                            this.indicador6 = 3;
+                        }
+                    } else {
+                        this.parametro6 = '-'
                     }
                 })
                 .catch(error => {
@@ -470,15 +485,20 @@ export default class AvaliacaoTutor extends LightningElement {
                 })
                 .then(result => {
                     console.log('contarAlunosAprovados()');
-                    this.parametro8 = result;
-                    if(result < 41){
-                        this.indicador8 = 0;
-                    } else if(result > 40 && result < 71){
-                        this.indicador8 = 1;
-                    } else if(result > 70 && result < 100){
-                        this.indicador8 = 2;
-                    } else if(result == 100){
-                        this.indicador8 = 3;
+                    if (result != 200) {
+                        
+                        this.parametro8 = result+'%';
+                        if(result < 41){
+                            this.indicador8 = 0;
+                        } else if(result > 40 && result < 71){
+                            this.indicador8 = 1;
+                        } else if(result > 70 && result < 100){
+                            this.indicador8 = 2;
+                        } else if(result == 100){
+                            this.indicador8 = 3;
+                        }
+                    } else {
+                        this.parametro8 = '-'
                     }
                     console.log('Indicador 8: ' + this.indicador8);
                     console.log('Parametro 8: ' + this.parametro8);
@@ -494,17 +514,22 @@ export default class AvaliacaoTutor extends LightningElement {
                     anoReferencia: parseInt(this.anoReferencia)
                 })
                 .then(result => {
-
-                    this.parametro4 = result;
-                    //Regra da resposta para Controle de Frequência
-                    if(result<=40){
-                        this.indicador4 = 0
-                    }else if(result >= 41 && result <= 70){
-                        this.indicador4 = 1
-                    }else if(result >= 71 && result <= 99){
-                        this.indicador4 = 2
-                    }else if(result == 100){
-                        this.indicador4 = 3
+                    if (result != 200) {
+                        
+                        
+                        this.parametro4 = result+'%';
+                        //Regra da resposta para Controle de Frequência
+                        if(result<=40){
+                            this.indicador4 = 0
+                        }else if(result >= 41 && result <= 70){
+                            this.indicador4 = 1
+                        }else if(result >= 71 && result <= 99){
+                            this.indicador4 = 2
+                        }else if(result == 100){
+                            this.indicador4 = 3
+                        }
+                    }else{
+                        this.parametro4 = '-';
                     }
                 })
                 .catch(error => {
@@ -517,17 +542,22 @@ export default class AvaliacaoTutor extends LightningElement {
                     mesReferencia: this.mesReferencia
                 })
                 .then(result => {
-
-                    this.parametro7 = result;
-                    //Regra da resposta para Controle de Frequência
-                    if(result<=40){
-                        this.indicador7 = 0
-                    }else if(result >= 41 && result <= 70){
-                        this.indicador7 = 1
-                    }else if(result >= 71 && result <= 99){
-                        this.indicador7 = 2
-                    }else if(result == 100){
-                        this.indicador7 = 3
+                    if (result != 200) {
+                        
+                        
+                        this.parametro7 = result+'%';
+                        //Regra da resposta para Controle de Frequência
+                        if(result<=40){
+                            this.indicador7 = 0
+                        }else if(result >= 41 && result <= 70){
+                            this.indicador7 = 1
+                        }else if(result >= 71 && result <= 99){
+                            this.indicador7 = 2
+                        }else if(result == 100){
+                            this.indicador7 = 3
+                        }
+                    }else{
+                        this.parametro7 = '-';
                     }
                 })
                 .catch(error => {
