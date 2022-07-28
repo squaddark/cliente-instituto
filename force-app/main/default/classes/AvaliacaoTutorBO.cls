@@ -366,24 +366,25 @@ public without sharing class AvaliacaoTutorBO {
         if(quantAlunos == 0){
             return 200;
         }
-
+        System.debug('BATATA');
         List<AvaliacaoEsportivaSocioemocional__c> listAlunosComAvaliacao = AvaliacaoTutorDAO.getInstance().getAlunosBYIdAndAvaliacao(setContactId, 'Esportivo');
+        System.debug('BATATAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA: ' + listAlunosComAvaliacao);
         integer alunosComAvaliacao = 0;
 
         for(AvaliacaoEsportivaSocioemocional__c item: listAlunosComAvaliacao){
             switch on mesReferencia {
                 when '04'{
-                    if (item.Periodo_de_Avaliacao__c.equals('1ª Avaliação')) {
+                    if (item.NotaEsportivaA1__c != null && item.Periodo_de_Avaliacao__c.equals('1ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
                 when '08'{
-                    if (item.Periodo_de_Avaliacao__c.equals('2ª Avaliação')) {
+                    if (item.NotaEsportiva_A2__c != null && item.Periodo_de_Avaliacao__c.equals('2ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
                 when '11'{
-                    if (item.Periodo_de_Avaliacao__c.equals('3ª Avaliação')) {
+                    if (item.NotaEsportivaA3__c != null && item.Periodo_de_Avaliacao__c.equals('3ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
@@ -420,17 +421,17 @@ public without sharing class AvaliacaoTutorBO {
         for(AvaliacaoEsportivaSocioemocional__c item: listAlunosComAvaliacao){
             switch on mesReferencia {
                 when '04'{
-                    if (item.Periodo_de_Avaliacao__c.equals('1ª Avaliação')) {
+                    if (item.NotaSocioemocionalA1__c != null && item.Periodo_de_Avaliacao__c.equals('1ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
                 when '08'{
-                    if (item.Periodo_de_Avaliacao__c.equals('2ª Avaliação')) {
+                    if (item.NotaSocioemocionalA2__c != null && item.Periodo_de_Avaliacao__c.equals('2ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
                 when '11'{
-                    if (item.Periodo_de_Avaliacao__c.equals('3ª Avaliação')) {
+                    if (item.NotaSocioemocionalA3__c != null && item.Periodo_de_Avaliacao__c.equals('3ª Avaliação')) {
                         alunosComAvaliacao++;
                     }
                 }
@@ -507,11 +508,12 @@ public without sharing class AvaliacaoTutorBO {
             return 200;
         }
 
+        System.debug('TESTE');
         Integer alunosComAvaliacaoAprovada =  AvaliacaoTutorDAO.getInstance().getAlunosAprovados(setContactId);
         System.debug('AvaliacaoTutorDAO.getAlunosAprovados: '+alunosComAvaliacaoAprovada);
 
         if(alunosComAvaliacaoAprovada == 0){
-            return 0;
+            return 200;
         }
         
         Decimal porcentagem = alunosComAvaliacaoAprovada*(100/quantAlunos);
@@ -526,7 +528,7 @@ public without sharing class AvaliacaoTutorBO {
     public Decimal contarAlunosComNota(String codTreinador, String mesReferencia){
         List<Turma__c> lstAlunosTreinador = AvaliacaoTutorDAO.getInstance().getQuantidadeAlunosTurmas(codTreinador);
         System.debug('AvaliacaoTutorDAO.getQuantidadeAlunosTurmas: '+lstAlunosTreinador);
-
+        
         if(lstAlunosTreinador.size() == 0){
             return 200;
         }

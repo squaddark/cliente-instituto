@@ -59,7 +59,6 @@
             <!--1-Número de turmas-->
             <div class= "slds-grid slds-wrap"> 
                 <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                    {numeroTurmas}
                     <!-- <lightning-combobox name="resposta1"
                         label="Número de turmas"
                         placeholder="Respostas"
@@ -68,51 +67,62 @@
                         onchange={atualizarRespostas}
                         required="true">
                     </lightning-combobox> -->
+
+                    <p class="textLabel">Número de turmas</p>
+                    <p class="textExibicao">{parametro1}</p>
                 </div>
             </div>
             <!--2-Número de alunos/turmas-->
             <div class= "slds-grid slds-wrap"> 
                 <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                    <lightning-combobox name="resposta2"
+                    <!-- <lightning-combobox name="resposta2"
                         label="Número de alunos/turmas"
                         placeholder="Respostas"
                         value={parametro2}
                         options={opcoesParametros2}
                         onchange={atualizarRespostas}
                         required="true">
-                    </lightning-combobox>
+                    </lightning-combobox> -->
+                    <p class="textLabel">Número de alunos/turmas</p>
+                    <p class="textExibicao">{parametro2}</p>
                 </div>
             </div>
             <!--3-Alunos/as matriculados com cadastro completo-->
             <div class= "slds-grid slds-wrap"> 
                 <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                    <lightning-combobox name="resposta3"
+                    <!-- <lightning-combobox name="resposta3"
                         label="Alunos/as matriculados com cadastro completo"
                         placeholder="Respostas"
                         value={parametro3}
                         options={opcoesParametros3}
                         onchange={atualizarRespostas}
                         required="true">
-                    </lightning-combobox>
+                    </lightning-combobox> -->
+                    <p class="textLabel">Alunos/as matriculados com cadastro completo</p>
+                    <p class="textExibicao">{parametro3}</p>
                 </div>
             </div>
             <!--4-Turmas com controle de frequência registrado (aulas ministradas)-->
             <div class= "slds-grid slds-wrap"> 
                 <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                    <lightning-combobox name="resposta4"
+                    <!-- <lightning-combobox name="resposta4"
                         label="Turmas com controle de frequência registrado (aulas ministradas)"
                         placeholder="Respostas"
                         value={parametro4}
                         options={opcoesParametros3}
                         onchange={atualizarRespostas}
                         required="true">
-                    </lightning-combobox>
+                    </lightning-combobox> -->
+                    <p class="textLabel">Turmas com controle de frequência registrado (aulas ministradas)</p>
+                    <p class="textExibicao">{parametro4}</p>
+
                 </div>
             </div>
             <template if:true={avaliacaoAbrAgoNov}>
                 <!--5-Realização das avaliações esportivas (alunos matriculados)-->
                 <div class= "slds-grid slds-wrap"> 
                     <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
+<!--                         
                         <lightning-combobox name="resposta5"
                             label="Realização das avaliações esportivas (alunos matriculados)"
                             placeholder="Respostas"
@@ -121,19 +131,26 @@
                             onchange={atualizarRespostas}
                             required="true">
                         </lightning-combobox>
+ -->
+                        <p class="textLabel">Realização das avaliações esportivas (alunos matriculados)</p>
+                        <p class="textExibicao">{parametro5}</p>
+                        
                     </div>
                 </div>
                 <!--6-Realização das avaliações socioemocionais (alunos matriculados)-->
                 <div class= "slds-grid slds-wrap"> 
                     <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                        <lightning-combobox name="resposta6"
+                       <!--  <lightning-combobox name="resposta6"
                             label="Realização das avaliações socioemocionais (alunos matriculados)"
                             placeholder="Respostas"
                             value={parametro6}
                             options={opcoesParametros3}
                             onchange={atualizarRespostas}
                             required="true">
-                        </lightning-combobox>
+                        </lightning-combobox> -->
+
+                        <p class="textLabel">Realização das avaliações socioemocionais (alunos matriculados)</p>
+                        <p class="textExibicao">{parametro6}</p>
                     </div>
                 </div>
             </template>
@@ -141,14 +158,17 @@
             <template if:true={avaliacaoAbrjunSetNov}>
                 <div class= "slds-grid slds-wrap"> 
                     <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                        <lightning-combobox name="resposta7"
+                       <!--  <lightning-combobox name="resposta7"
                             label="Notas de português e matemática (alunos matriculados)"
                             placeholder="Respostas"
                             value={parametro7}
                             options={opcoesParametros3}
                             onchange={atualizarRespostas}
                             required="true">
-                        </lightning-combobox>
+                        </lightning-combobox> -->
+
+                        <p class="textLabel">Notas de português e matemática (alunos matriculados)</p>
+                    <p class="textExibicao">{parametro7}</p>
                     </div>
                 </div>
             </template>
@@ -156,14 +176,17 @@
             <template if:true={avaliacaoNov}>
                 <div class= "slds-grid slds-wrap"> 
                     <div class="slds-col slds-size_1-of-1" style="padding-right: 5px;">
-                        <lightning-combobox name="resposta8"
+                        <!-- <lightning-combobox name="resposta8"
                             label="Aprovação no ano letivo (alunos matriculados)"
                             placeholder="Respostas"
                             value={parametro8}
                             options={opcoesParametros3}
                             onchange={atualizarRespostas}
                             required="true">
-                        </lightning-combobox>
+                        </lightning-combobox> -->
+
+                        <p class="textLabel">Aprovação no ano letivo (alunos matriculados)</p>
+                        <p class="textExibicao">{parametro8}</p>
                     </div>
                 </div>
             </template>
